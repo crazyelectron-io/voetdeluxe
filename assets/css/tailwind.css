@@ -1,0 +1,44 @@
+/*
+ ** ./assets/css/tailwind.css
+ */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@include font-face( Aleo, '~/assets/fonts/aleo/Aleo-Regular', 400, normal, ttf);
+@include font-face( Aleo, '~/assets/fonts/aleo/Aleo-Bold', 600, bold, ttf);
+
+@layer base {
+  body {
+      background-color: bg-white-500;
+  }
+  h1 {
+      @apply text-2xl;
+  }
+  h2 {
+      @apply text-xl;
+  }
+
+  /* Set default styling for forms elements */
+  [type='text'],
+  [type='password'],
+  [type='email'],
+  [type='number'],
+  [type='url'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='week'],
+  [type='time'],
+  [type='search'],
+  [type='tel'],
+  [multiple],
+  textarea,
+  select {
+    @apply w-full border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md;
+  }
+  [type='checkbox'],
+  [type='radio'] {
+    @apply rounded text-blue-500 border-gray-200 focus:ring-blue-500;
+  }
+}

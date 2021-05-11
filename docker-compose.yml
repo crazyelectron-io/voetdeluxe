@@ -1,0 +1,28 @@
+---
+version: "3.5"
+
+services:
+
+  voetdeluxe:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: voetdeluxe:1.0
+    container_name: voetdeluxe
+    networks:
+      - traefik-network
+    expose:
+      - 6800
+    environment:
+      - PUID=1001
+      - GUID=1002
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.voetdeluxe.rule=Host(`www.voetdeluxe.nl`, `voetdeluxe.nl`)"
+      - "traefik.http.routers.voetdeluxe.entryPoints=secure"
+      - "traefik.http.routers.voetdeluxe.tls.certresolver=le"
+
+networks:
+  traefik-network:
+    external: true
