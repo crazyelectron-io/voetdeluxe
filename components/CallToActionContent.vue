@@ -9,20 +9,43 @@
     <h3 class="my-4 text-2xl md:text-3xl leading-tight">
       Volledige voetverzorging, in het comfort van uw eigen huis
     </h3>
-    <nuxt-link
-      class="inline-block py-2 px-4 font-bold hover:text-blue-800 no-underline"
-      to="#"
-      v-scroll-to="{ element: '#contact', duration: 1000, offset: -30 }"
+    <button
+      class="mx-auto lg:mx-0 hover:no-underline hover:bg-blue-500 hover:text-white-500 focus:outline-none bg-white-500 text-orange-500 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+      @click.prevent.stop="afspraakButton"
     >
-      <button class="mx-auto lg:mx-0 hover:no-underline hover:bg-blue-500 hover:text-white-500 bg-white-500 text-orange-500 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-        Afspraak
-      </button>
-    </nuxt-link>
+      Afspraak
+    </button>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'CallToActionContent'
+  name: 'CallToActionContent',
+  methods: {
+    afspraakButton() {
+      var vueScrollTo = require('vue-scrollto')
+      var options = {
+        // container: '#container',
+        easing: 'ease-in',
+        lazy: true,
+        offset: -30,
+        force: true,
+        cancelable: true,
+        onStart: function(element) {
+          // scrolling started
+        },
+        onDone: function(element) {
+          // scrolling is done
+        },
+        onCancel: function() {
+          // scrolling has been interrupted
+        },
+        x: false,
+        y: true
+      }
+
+      var cancelScroll = this.$scrollTo("#contact", 1000, options)
+    }
+  }
 }
 </script>

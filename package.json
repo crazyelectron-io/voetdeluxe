@@ -24,6 +24,7 @@
     "@nuxtjs/content": "^0.3.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@tailwindcss/forms": "^0.3.2",
+    "css.escape": "^1.5.1",
     "nuxt": "^2.14.3",
     "nuxt-svg-loader": "^1.2.0",
     "vue-scrollto": "^2.20.0",

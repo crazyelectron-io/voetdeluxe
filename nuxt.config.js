@@ -40,7 +40,7 @@ export default {
       { rel: 'icon', type: 'image/vnd.mirosoft.icon', sizes: '32x32 48x48', href: '/favicon.ico' },
       { rel: 'icon', sizes: '128x128', href: '/favicon.icns' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
-    ]
+    ],
   },
 
   /*
@@ -98,6 +98,7 @@ export default {
    */
   modules: [
     'nuxt-svg-loader',
+    'css.escape',
     ['vue-scrollto/nuxt', { duration: 300 }],
   ],
 
@@ -132,11 +133,12 @@ export default {
     },
     // You can extend webpack config here
     extend(config, ctx) {
-      loaders: {
-        file: {
-          esModule: false
-        }
-      }
+      // config.resolve.symlinks = false
+      // loaders: {
+      //   file: {
+      //     esModule: false
+      //   }
+      // }
     }
   },
 

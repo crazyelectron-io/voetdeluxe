@@ -73,9 +73,7 @@
               </svg>
             </a>
           </div>
-          <p class="mt-8 text-center text-sm text-white-400">
-            © 2021 ScopeWeb.nl. All rights reserved.
-          </p>
+          <p class="mt-8 text-center text-sm text-white-400">© 2021 ScopeWeb.nl. All rights reserved.</p>
         </div>
       </div>
     </div>

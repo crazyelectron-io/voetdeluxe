@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white-500 py-8" id="contact">
+  <section class="bg-white-800 py-8" id="contact">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
       <h1 class="w-full my-2 text-4xl md:text-5xl font-bold leading-tight text-center text-gray-500">
         Contact
@@ -22,7 +22,7 @@
                 name="name"
                 type="text"
                 required
-                class=""
+                class="bg-white-500"
               />
             </div>
           </div>
@@ -36,7 +36,7 @@
                 name="email"
                 type="email"
                 autocomplete="email"
-                class=""
+                class="bg-white-500"
               />
             </div>
           </div>
@@ -50,7 +50,7 @@
                 name="phone"
                 type="tel"
                 required
-                class=""
+                class="bg-white-500"
               />
             </div>
           </div>
@@ -60,7 +60,7 @@
             </label>
             <div class="mt-1">
               <textarea
-                class="form-textarea mt-1 block w-full text-gray-400"
+                class="form-textarea mt-1 block w-full text-gray-400 bg-white-500"
                 rows="3"
                 placeholder="Type hier uw eventuele vraag of opmerking"
               ></textarea>

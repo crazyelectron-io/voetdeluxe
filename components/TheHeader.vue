@@ -67,7 +67,8 @@
         </ul>
         <button
           :class="navActionClassList"
-          class="mx-auto lg:mx-2 hover:no-underline hover:text-white-500 hover:bg-blue-600 font-bold rounded-full mt-4 lg:mt-0 py-2 px-8 mr-4 shadow"
+          class="mx-auto lg:mx-2 hover:no-underline hover:text-white-500 hover:bg-blue-600 focus:outline-none font-bold rounded-full mt-4 lg:mt-0 py-2 px-8 mr-4 shadow"
+          @click.prevent.stop="actionButton"
         >
           Actie
         </button>
@@ -91,6 +92,7 @@ export default {
       isOpen: false,
     }
   },
+  scrollToTop: false,
   computed: {
     isSticky() {
       return this.scrollY > 10
@@ -116,6 +118,29 @@ export default {
     },
   },
   methods: {
+    actionButton() {
+      var vueScrollTo = require('vue-scrollto')
+      var options = {
+        // container: '#container',
+        easing: 'ease-in',
+        lazy: true,
+        offset: -50,
+        force: true,
+        cancelable: true,
+        onStart: function(element) {
+          // scrolling started
+        },
+        onDone: function(element) {
+          // scrolling is done
+        },
+        onCancel: function() {
+          // scrolling has been interrupted
+        },
+        x: false,
+        y: true
+      }
+      var cancelScroll = this.$scrollTo("#actie", 1000, options)
+    },
     onClick() {
       this.isOpen = false
     },

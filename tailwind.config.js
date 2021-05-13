@@ -6,7 +6,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  mode: 'jit',      // New experimental JIT engine in tailwindcss 2.1
+  // mode: 'jit',      // New experimental JIT engine in tailwindcss 2.1
   darkMode: false,  // or 'media' or 'class'
   theme: {
     screens: {
