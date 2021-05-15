@@ -5,29 +5,33 @@ trigger:
     - main
 variables:
   buildConfiguration: 'Release'
-  containerRegistry: 'Azure Container Registry VoetDeluxe'
-  imageName: 'voetdeluxe'
+  containerRegistry: 'Docker Hub'
+  imageName: 'crazyelectron-io/voetdeluxeweb:$(Build.BuildId)'
   version: '1.0'
   tag: '$(Build.BuildId)'
 pool:
   vmImage: 'ubuntu-latest'
-stages:
 # Build stage
+stages:
 - stage: Build
+  displayName: Build image
   jobs:
-  - job: Build
-    displayName: Build
+  - job: DockerImage
+    displayName: Build and push Docker image
     steps:
-    - task: NodeTool@0
-      displayName: 'Install Node.js'
+    - task: Docker@1
+      displayName: 'Build the Docker image'
       inputs:
-        versionSpec: '15.x'
-        checkLatest: true
-    - script: |
-        npm install
-        npm run build --if-present
-        npm run test --if-present
-      displayName: 'npm install, build and test'
+        containerregistrytype: 'Container Registry'
+        dockerRegistryEndpoint: '$(containerRegistry)'
+        command: 'Build an image'
+        dockerFile: '**/Dockerfile'
+        imageName: '$(imageName)'
+        includeLatestTag: true
+        useDefaultContext: false
+        buildContext: '.'
+
+
     - task: Docker@2
       inputs:
         containerRegistry: '$(containerRegistry)'
