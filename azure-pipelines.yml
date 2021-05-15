@@ -30,14 +30,11 @@ stages:
         includeLatestTag: true
         useDefaultContext: false
         buildContext: '.'
-
-
-    - task: Docker@2
+    - task: Docker@1
+      displayName: 'Push the Docker image to Dockerhub'
       inputs:
-        containerRegistry: '$(containerRegistry)'
-        repository: '$(imageName)'
-        command: buildAndPush
-        Dockerfile: '**/Dockerfile'
-        tags: |
-          latest
-          $(version)
+        containerregistrytype: 'Container Registry'
+        dockerRegistryEndpoint: '$(containerRegistry)'
+        command: 'Push an image'
+        imageName: '$(imageName)'
+      condition: and(succeeded(), ne(variables['Build.Reason'], 'PullRequest'))
