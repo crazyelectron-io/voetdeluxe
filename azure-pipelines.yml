@@ -18,9 +18,6 @@ variables:
   version: '1.0.0'
   tag: 'azuredevops-$(Build.BuildId)'
 
-pool:
-  vmImage: 'ubuntu-latest'
-
 stages:
 
 # --- Build and Push stage
@@ -29,6 +26,8 @@ stages:
   jobs:
   - job: Build
     displayName: Build and Push
+    pool:
+      vmImage: 'ubuntu-latest'
     steps:
     - task: Docker@2
       displayName: Build an image
@@ -39,7 +38,6 @@ stages:
         dockerFile: '**/Dockerfile'
         buildContext: '$(Build.SourcesDirectory)/'
         tags: '$(tag)'
-
     - task: Docker@2
       displayName: 'Push the Docker image to Dockerhub'
       inputs:
@@ -51,9 +49,11 @@ stages:
 # --- Deploy stage
 - stage: DeployVM
   jobs:
-  - deployment: Production
+  - deployment: VMDeploy
     displayName: Deploy Containers
-    environment: 'voetdeluxehomevm'
+    environment:
+      name:  'environment-7-47107dc9-2aee-452c-a9ea-226110371aef'
+      resourceType: VirtualMachine
     strategy:
       runOnce:
         deploy:
