@@ -13,16 +13,16 @@ resources:
 
 variables:
   buildConfiguration: 'Release'
-  containerRegistry: 'Docker Hub'
   imageName: 'crazyelectron/voetdeluxe'
   dockerFile: '**/Dockerfile'
-  version: '1.0'
+  version: '1.0.0'
   tag: 'azuredevops-$(Build.BuildId)'
 
 pool:
   vmImage: 'ubuntu-latest'
 
 stages:
+
 # --- Build and Push stage
 - stage: Build
   displayName: Build and Push image
@@ -33,7 +33,7 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        containerRegistry: '$(containerRegistry)'
+        containerRegistry: 'Docker Hub'
         repository: '$(imageName)'
         command: 'build'
         dockerFile: '**/Dockerfile'
@@ -43,7 +43,38 @@ stages:
     - task: Docker@2
       displayName: 'Push the Docker image to Dockerhub'
       inputs:
-        containerRegistry: '$(containerRegistry)'
+        containerRegistry: 'Docker Hub'
         repository: '$(imageName)'
         command: 'push'
         tags: '$(tag)'
+
+# --- Deploy stage
+- stage: DeployVM
+  jobs:
+  - deployment: Production
+    displayName: Deploy Containers
+    environment: 'voetdeluxehomevm'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: self
+          - script: "docker network ls"
+          - script: "hostname"
+          - task: DockerCompose@0
+            displayName: Pull updated images
+            inputs:
+              containerregistrytype: 'Container Registry'
+              dockerRegistryEndpoint: 'Docker Hub'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
+              dockerComposeCommand: 'pull'
+          - task: DockerCompose@0
+            displayName: Deploy to VM with Docker Compose
+            inputs:
+              containerregistrytype: 'Container Registry'
+              dockerRegistryEndpoint: 'Docker Hub'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
+              dockerComposeCommand: 'up'
+              arguments: '-d'
