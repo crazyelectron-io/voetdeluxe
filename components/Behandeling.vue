@@ -1,6 +1,6 @@
 <template>
   <div :class="classList" class="w-full px-3 pt-6 pb-2 flex flex-col flex-grow flex-shrink">
-    <div class="flex-1 bg-white-500 rounded-t-lg overflow-hidden shadow-lg">
+    <div class="flex-1 bg-white rounded-t-lg overflow-hidden shadow-lg">
       <div class="flex flex-wrap no-underline hover:no-underline">
         <img :src="require(`../assets/img/${image.toLowerCase()}`)" alt="" class="object-cover h-48 w-full rounded-t-lg" >
         <div class="w-full text-gray-700 text-xs md:text-sm px-6">
@@ -18,7 +18,7 @@
       </div>
     </div>
     <div>
-      <div class="flex-1 mt-auto bg-white-500 rounded-b overflow-hidden shadow-lg items-center p-6">
+      <div class="flex-1 mt-auto bg-white rounded-b overflow-hidden shadow-lg items-center p-6">
         <div class="items-center justify-end">
           <slot name="price" />
         </div>

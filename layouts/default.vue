@@ -1,5 +1,5 @@
 <template>
-  <div class="leading-normal tracking-normal text-white-500 bg-orange-500">
+  <div class="leading-normal tracking-normal text-white bg-orange">
     <the-header />
     <nuxt />
     <the-footer />
@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import TheHeader from '@/components/TheHeader.vue'
-import TheFooter from '@/components/TheFooter.vue'
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
 
 export default {
   components: {
-    'the-header': TheHeader,
-    'the-footer': TheFooter
+    'the-header': Header,
+    'the-footer': Footer
   }
 }
 </script>

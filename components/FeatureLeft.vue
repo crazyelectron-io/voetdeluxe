@@ -5,7 +5,7 @@
     </div>
     <div class="w-full sm:w-1/2 sm:p-6 sm:mt-6 p-2 mt-2">
       <div class="align-middle">
-        <h3 class="text-3xl text-gray-500 font-bold leading-none mb-3">
+        <h3 class="text-xl md:text-2xl xl:text-3xl text-gray font-bold leading-none mb-3">
           {{ headline }}
         </h3>
         <p class="text-gray-700 mb-8">

@@ -9,18 +9,14 @@ module.exports = {
   // mode: 'jit',      // New experimental JIT engine in tailwindcss 2.1
   darkMode: false,  // or 'media' or 'class'
   theme: {
-    screens: {
-      'xs': '480px',
-      'sm': '640px',
-      'md': '800px',
-      'lg': '920px',
-      'xl': '1280px',
-      '2xl': '1536px',
-    },
+    backgroundImage: theme => ({
+      'hero-pattern': "url('/img/logo-background.png')",
+    }),
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
       white: {
+        DEFAULT: '#f7efde',
         100: '#ffffff',
         200: '#fffaef',
         300: '#fbf6ed',
@@ -32,6 +28,7 @@ module.exports = {
         900: '#ede0bf',
       },
       orange: {
+        DEFAULT: '#ff8f1f',
         100: '#ffcc99',
         200: '#ffc285',
         300: '#ffb870',
@@ -43,6 +40,7 @@ module.exports = {
         900: '#e07000',
       },
       blue: {
+        DEFAULT: '#0096e0',
         100: '#47c2ff',
         200: '#33bbff',
         300: '#1fb4ff',
@@ -54,6 +52,7 @@ module.exports = {
         900: '#006ca4',
       },
       gray: {
+        DEFAULT: '#494f5a',
         100: '#82899b',
         200: '#757d95',
         300: '#646b7d',
@@ -83,18 +82,18 @@ module.exports = {
   ],
   corePlugins: {
     // Disable if these features are not used
-    // filter: false,
-    // backdropFilter: false,
-    // mixBlendMode: false,
-    // isolation: false,
+    filter: false,
+    backdropFilter: false,
+    mixBlendMode: false,
+    isolation: false,
   },
   purge: {
     content: [  // See nuxt.config.js
-      // './components/**/*.{vue,js}',
-      // './layouts/**/*.vue',
-      // './pages/**/*.vue',
-      // './plugins/**/*.{js,ts}',
-      // './nuxt.config.{js,ts}',
+      './components/**/*.{vue,js}',
+      './layouts/**/*.vue',
+      './pages/**/*.vue',
+      './plugins/**/*.{js,ts}',
+      './nuxt.config.{js,ts}',
     ],
     options: {
       keyframes: true,

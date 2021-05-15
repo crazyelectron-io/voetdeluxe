@@ -54,7 +54,7 @@ describe('Logo', () => {
         const wrapper = factory()
         wrapper.setProps({ isStickable: false })
         const anchor = wrapper.find('a')
-        expect(anchor.classes('text-orange-600')).toBe(true)
+        expect(anchor.classes('text-orange')).toBe(true)
       })
     })
   })

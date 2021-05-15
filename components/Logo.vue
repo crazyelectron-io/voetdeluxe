@@ -5,7 +5,13 @@
     v-scroll-to="{ element: '#home', duration: 1000, offset: -100 }"
   >
     <img class="h-12" :src="require(`../assets/img/${myLogo.toLowerCase()}`)" alt="VoetDeluxe">
-    <p v-if="withText" :class="classList" class="text-2xl md:text-3xl font-bold p-2">VoetDeluxe</p>
+    <p
+      v-if="withText"
+      :class="classList"
+      class="text-2xl md:text-3xl font-bold p-2"
+    >
+      VoetDeluxe
+    </p>
   </nuxt-link>
 </template>
 
@@ -13,10 +19,6 @@
 export default {
   name: 'Logo',
   props: {
-    isStickable: {
-      type: Boolean,
-      default: false
-    },
     isSticky: {
       type: Boolean,
       default: false
@@ -30,9 +32,9 @@ export default {
     classList() {
       let classList = ''
       if (this.isSticky) {
-        classList = this.isSticky ? 'text-orange-500' : 'text-white-500'
+        classList = this.isSticky ? 'text-orange' : 'text-white'
       } else {
-        classList = 'text-white-500'
+        classList = 'text-white'
       }
       return classList
     },

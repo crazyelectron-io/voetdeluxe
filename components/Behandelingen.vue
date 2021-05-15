@@ -1,11 +1,11 @@
 <template>
-  <section class="bg-white-500 text-white-500 py-2" id="behandelingen">
+  <section class="bg-white text-white py-2" id="behandelingen">
     <div class="container mx-auto flex flex-wrap w-full py-6">
-      <h1 class="w-full my-2 text-4xl md:text-5xl font-bold leading-tight text-center text-gray-500">
+      <h1 class="w-full my-2 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center text-gray">
         Behandelingen
       </h1>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue-500"></div>
+        <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue"></div>
       </div>
       <behandeling-column :rows="3" image="basisbehandeling.jpg">
         <template v-slot:overline>Maximale behandeltijd 1 uur</template>

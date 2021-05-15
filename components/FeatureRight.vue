@@ -1,7 +1,7 @@
 <template>
   <div :class="background" class="flex flex-wrap">
     <div class="w-5/6 sm:w-1/2 p-6">
-      <h3 class="text-2xl md:text-3xl text-gray-500 font-bold leading-none mb-3">
+      <h3 class="text-xl md:text-2xl xl:text-3xl text-gray font-bold leading-none mb-3">
         {{ headline }}
       </h3>
       <p class="text-gray-700 mb-8">

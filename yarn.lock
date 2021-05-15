@@ -1719,6 +1719,11 @@
     "@typescript-eslint/types" "4.22.1"
     "eslint-visitor-keys" "^2.0.0"
 
+"@vue-a11y/focus-loop@^0.1.0":
+  "integrity" "sha512-to4AIwIOokv33nQC7yxld76rxi00/pZV1T4GD/oYooht0PQ4v6CB3ahZxag6tEmuuOJkdLTFvFbnl+xWgnlQ2w=="
+  "resolved" "https://registry.npmjs.org/@vue-a11y/focus-loop/-/focus-loop-0.1.2.tgz"
+  "version" "0.1.2"
+
 "@vue/babel-helper-vue-jsx-merge-props@^1.0.0":
   "integrity" "sha512-6tyf5Cqm4m6v7buITuwS+jHzPlIPxbFzEhXR5JGZpbrvOcp1hiQKckd305/3C7C36wFekNTQSxAtgeM0j0yoUw=="
   "resolved" "https://registry.npmjs.org/@vue/babel-helper-vue-jsx-merge-props/-/babel-helper-vue-jsx-merge-props-1.0.0.tgz"
@@ -11747,6 +11752,13 @@
     "resolve" "^1.2.0"
     "serialize-javascript" "^3.1.0"
     "source-map" "0.5.6"
+
+"vue-social-chat@^0.1.6":
+  "integrity" "sha512-SWJI97U49yFp5syUSWix6FKzDmaUxX9sxeIr55M+WnaPQDaCGK0Hy86iEgCAlgibMK4RQEPB5stzP/f4JMekxQ=="
+  "resolved" "https://registry.npmjs.org/vue-social-chat/-/vue-social-chat-0.1.6.tgz"
+  "version" "0.1.6"
+  dependencies:
+    "@vue-a11y/focus-loop" "^0.1.0"
 
 "vue-style-loader@^4.1.0":
   "integrity" "sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ=="

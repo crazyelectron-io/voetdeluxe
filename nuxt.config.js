@@ -53,9 +53,9 @@ export default {
   /*
    ** Router configuration
    */
-  router: {
-    mode: 'history'
-  },
+  // router: {
+  //   mode: 'history'
+  // },
 
   /*
    ** Customize the progress-bar color
@@ -73,7 +73,7 @@ export default {
    ** Plugins to load before mounting the App: https://go.nuxtjs.dev/config-plugins
    */
   plugins: [
-    '~/plugins/vuelidate',
+    // '~/plugins/vuelidate',
   ],
 
   /*
@@ -99,13 +99,13 @@ export default {
   modules: [
     'nuxt-svg-loader',
     'css.escape',
-    ['vue-scrollto/nuxt', { duration: 300 }],
+    ['vue-scrollto/nuxt', { duration: 500 }],
   ],
 
-  purgeCSS: {
-    whitelist: ['hidden'],
-    whitelistPatterns: [/md:w-[1-6]/],
-  },
+  // purgeCSS: {
+  //   whitelist: ['hidden'],
+  //   whitelistPatterns: [/md:w-[1-6]/],
+  // },
 
   googleAnalyics: {
     id: 'UA-XXXXX-X'

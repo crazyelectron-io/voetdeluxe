@@ -10,7 +10,7 @@
 
 @layer base {
   body {
-      background-color: bg-white-500;
+      background-color: bg-white;
   }
   h1 {
       @apply text-2xl;
@@ -35,10 +35,10 @@
   [multiple],
   textarea,
   select {
-    @apply w-full border-gray-200 rounded-lg focus:border-blue-500 focus:ring-blue-500 shadow-md;
+    @apply w-full border-gray-200 rounded-lg focus:border-blue focus:ring-blue shadow-md;
   }
   [type='checkbox'],
   [type='radio'] {
-    @apply rounded text-blue-500 border-gray-200 focus:ring-blue-500;
+    @apply rounded text-blue border-gray-200 focus:ring-blue;
   }
 }

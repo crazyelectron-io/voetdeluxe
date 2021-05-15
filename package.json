@@ -28,6 +28,7 @@
     "nuxt": "^2.14.3",
     "nuxt-svg-loader": "^1.2.0",
     "vue-scrollto": "^2.20.0",
+    "vue-social-chat": "^0.1.6",
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
