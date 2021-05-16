@@ -52,7 +52,7 @@ stages:
   - deployment: VMDeploy
     displayName: Deploy Containers
     environment:
-      name:  'environment-7-47107dc9-2aee-452c-a9ea-226110371aef'
+      name:  'voetdeluxehomevm'
       resourceType: VirtualMachine
     strategy:
       runOnce:

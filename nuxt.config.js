@@ -1,4 +1,6 @@
 // nuxt.config.js
+import nuxtConfig from "./nuxt.config";
+
 export default {
   /*
    ** SSR or Static
@@ -60,7 +62,7 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#fff' },
+  // loading: { color: '#fff' },
 
   /*
    ** Global CSS: https://go.nuxtjs.dev/config-css
@@ -97,8 +99,8 @@ export default {
    ** Nuxt.js modules
    */
   modules: [
-    'nuxt-svg-loader',
-    'css.escape',
+    // 'nuxt-svg-loader',
+    // 'css.escape',
     ['vue-scrollto/nuxt', { duration: 500 }],
   ],
 
@@ -114,8 +116,8 @@ export default {
   /*
    ** Nuxt.js Image module config
    */
-  image: {
-  },
+  // image: {
+  // },
 
   /*
    ** Build configuration
@@ -127,10 +129,10 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ],
     },
-    loaders: {
-      file: { esModule: false },
-      imgUrl: { esModule: false },
-    },
+    // loaders: {
+    //   file: { esModule: false },
+    //   imgUrl: { esModule: false },
+    // },
     // You can extend webpack config here
     extend(config, ctx) {
       // config.resolve.symlinks = false
@@ -139,6 +141,14 @@ export default {
       //     esModule: false
       //   }
       // }
+    }
+  },
+
+  purge: {
+    content(defaultContents) {
+      return defaultContents
+        .map((path) => join(nuxtConfig.srcDir, path))
+        .map((file) => file.replace(".js", ".ts"));
     }
   },
 

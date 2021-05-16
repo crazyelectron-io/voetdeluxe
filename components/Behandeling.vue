@@ -1,5 +1,6 @@
 <template>
-  <div :class="classList" class="w-full px-3 pt-6 pb-2 flex flex-col flex-grow flex-shrink">
+  <div
+    class="w-full md:w-1/2 lg:w-1/3 px-3 pt-6 pb-2 flex flex-col flex-grow flex-shrink">
     <div class="flex-1 bg-white rounded-t-lg overflow-hidden shadow-lg">
       <div class="flex flex-wrap no-underline hover:no-underline">
         <img :src="require(`../assets/img/${image.toLowerCase()}`)" alt="" class="object-cover h-48 w-full rounded-t-lg" >
@@ -48,9 +49,6 @@ export default {
     }
   },
   computed: {
-    classList() {
-      return `md:w-1/2 lg:w-1/${this.rows}`
-    },
     renderAction() {
       return this.action !== ''
     }
