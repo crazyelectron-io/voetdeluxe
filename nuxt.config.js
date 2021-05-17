@@ -78,6 +78,10 @@ export default {
     // '~/plugins/vuelidate',
   ],
 
+  serverMiddleware: [
+    // '~/api/v1/send-email.js'
+  ],
+
   /*
    ** Auto import components: https://go.nuxtjs.dev/config-components
    */
@@ -102,6 +106,7 @@ export default {
     // 'nuxt-svg-loader',
     // 'css.escape',
     ['vue-scrollto/nuxt', { duration: 500 }],
+    '@nuxtjs/axios',
   ],
 
   // purgeCSS: {

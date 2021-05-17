@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white-800 py-8" id="contact">
+  <section class="bg-white-500 py-8" id="contact">
     <div class="container mx-auto px-2 pt-4 pb-12 text-gray-800">
       <h1 class="w-full my-2 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center text-gray">
         Contact
@@ -89,6 +89,7 @@
             <button
               type="submit"
               class="w-full py-2 font-medium bg-orange text-white border-gray-300 rounded-lg shadow-sm focus:border-gray-200 focus:ring-gray-200"
+              @click="onSubmit"
             >
               Verzend
             </button>
@@ -101,5 +102,37 @@
 
 <script>
   export default {
+    data() {
+      return {
+        name: "",
+        phone: "",
+        email: "",
+        message: "",
+        submitting: false,
+        isSubmitted: false,
+        error: false,
+      }
+    },
+    methods: {
+      async onSubmit() {
+        this.submitting = true;
+        this.error = false;
+        try {
+          await this.$axios.$post('/api/v1/send-email', {
+            name: this.name,
+            phone: this.phone,
+            email: this.email,
+            message: this.message,
+          });
+          this.submitting = false
+          this.isSubmitted = true
+          await new Promise(resolve => setTimeout(resolve, 2500))
+        } catch(e) {
+          this.submitting = false
+          this.error = true
+          console.error(e)
+        }
+      },
+    },
   }
 </script>

@@ -4,7 +4,7 @@
       <!-- <img class="absolute bg-fixed object-scale-down top-20 left-0 opacity-25 z-0" src="~assets/img/logo-background.png" alt="" > -->
       <!--Left Col-->
       <div class="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
-        <p class="uppercase tracking-wide mt-0 mb-6 w-full">Uw voeten in goede handen</p>
+        <p class="uppercase tracking-wide mt-0 mb-6 w-full">Uw voeten zijn in goede handen maar de website is nog in aanbouw</p>
         <h1 class="my-4 text-3xl md:text-4xl font-bold leading-snug lg:tracking-wide z-10">
           Ervaar het gemak van een pedicure aan huis
         </h1>

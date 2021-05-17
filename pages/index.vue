@@ -4,6 +4,7 @@
     <features />
     <acties />
     <behandelingen />
+    <producten />
     <contact />
     <call-to-action />
   </div>
@@ -14,6 +15,7 @@ import Hero from '@/components/Hero'
 import Features from '@/components/Features'
 import Behandelingen from '@/components/Behandelingen'
 import Acties from '@/components/Acties'
+import Producten from '@/components/Producten'
 import Contact from '@/components/Contact'
 import CallToAction from '@/components/CallToAction'
 
@@ -24,6 +26,7 @@ export default {
     features: Features,
     behandelingen: Behandelingen,
     acties: Acties,
+    producten: Producten,
     contact: Contact,
     'call-to-action': CallToAction
   },
