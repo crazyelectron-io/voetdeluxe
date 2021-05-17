@@ -8,7 +8,7 @@
         <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue"></div>
       </div>
       <div class="flex text-gray-600 font-semibold text-base mt-0 p-0 mb-6 justify-center items-start text-center">
-        Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken.
+        Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081.
       </div>
       <div class="flex flex-col sm:flex-row justify-center pt-12 my-6 sm:my-2">
         <form class="mb-0 space-y-6" action="#" method="POST">
