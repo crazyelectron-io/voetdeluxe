@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: voetdeluxe:1.0.0
+    image: voetdeluxe:1.0.1
     container_name: voetdeluxe
     networks:
       - traefik-network
