@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: voetdeluxe:1.0.1
+    image: voetdeluxe:1.0.2
     container_name: voetdeluxe
     networks:
       - traefik-network
@@ -26,5 +26,5 @@ services:
 
 networks:
   traefik-network:
-    # external: true
-    driver: bridge
+    external: true
+    # driver: bridge
