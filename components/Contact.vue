@@ -113,7 +113,7 @@
     methods: {
       onSubmit() {
         console.log("Sending form data")
-        alert("Er is iets fout gegaan. \nProbeer het later opnieuw of bel me op 0652878081.")
+        alert("Er is iets fout gegaan. \nProbeer het later opnieuw of bel me op 0652878081")
         let res = this.$axios.$post('/send', {
           name: this.thename,
           email: this.theemail,
