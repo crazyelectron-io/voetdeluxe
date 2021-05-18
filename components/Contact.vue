@@ -7,8 +7,8 @@
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue"></div>
       </div>
-      <div class="flex text-gray-600 font-semibold text-base mt-0 p-0 mb-6 justify-center items-start text-center">
-        Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081.
+      <div class="flex text-gray-600 font-semibold text-base mt-0 p-0 mb-6 md:mx-8 justify-center items-start text-center">
+        Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081 of mailen op info@voetdeluxe.nl.
       </div>
       <div class="flex flex-col sm:flex-row justify-center pt-12 my-6 sm:my-2">
         <form class="mb-0 space-y-6" action="#" method="POST">
@@ -89,7 +89,7 @@
             <button
               type="submit"
               class="w-full py-2 font-medium bg-orange text-white border-gray-300 rounded-lg shadow-sm focus:border-gray-200 focus:ring-gray-200"
-              @click="onSubmit"
+              @click.prevent="onSubmit"
             >
               Verzend
             </button>
@@ -114,24 +114,8 @@
       }
     },
     methods: {
-      async onSubmit() {
-        this.submitting = true;
-        this.error = false;
-        try {
-          await this.$axios.$post('/api/v1/send-email', {
-            name: this.name,
-            phone: this.phone,
-            email: this.email,
-            message: this.message,
-          });
-          this.submitting = false
-          this.isSubmitted = true
-          await new Promise(resolve => setTimeout(resolve, 2500))
-        } catch(e) {
-          this.submitting = false
-          this.error = true
-          console.error(e)
-        }
+      onSubmit() {
+        alert("Er is iets fout gegaan. \nProbeer het later opnieuw of bel me op 0652878081.")
       },
     },
   }
