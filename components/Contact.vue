@@ -104,18 +104,24 @@
   export default {
     data() {
       return {
-        name: "",
-        phone: "",
-        email: "",
-        message: "",
-        submitting: false,
-        isSubmitted: false,
-        error: false,
+        thename: "",
+        thephone: "",
+        theemail: "",
+        themessage: "",
       }
     },
     methods: {
       onSubmit() {
+        console.log("Sending form data")
         alert("Er is iets fout gegaan. \nProbeer het later opnieuw of bel me op 0652878081.")
+        let res = this.$axios.$post('/send', {
+          name: this.thename,
+          email: this.theemail,
+          message: this.themessage,
+          subject: 'VoetDeluxe Contact Form'
+        })
+        let data = res.data;
+        console.log(data);
       },
     },
   }
