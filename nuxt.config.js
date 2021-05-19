@@ -49,7 +49,7 @@ export default {
    ** Setup port and address
    */
   server: {
-    port: 6800
+    port: 3000
   },
 
   /*
@@ -105,8 +105,22 @@ export default {
   modules: [
     // 'nuxt-svg-loader',
     // 'css.escape',
-    ['vue-scrollto/nuxt', { duration: 500 }],
+    ['vue-scrollto/nuxt', { duration: 600 }],
     '@nuxtjs/axios',
+    ['nuxt-mail', {
+      message: {
+        to: 'info@voetdeluxe.nl',
+      },
+      smtp: {
+        host: "smtp.mailtrap.io",
+        port: 2525,
+      },
+      secure: false,
+      auth: {
+        user: '595e32d8eb41f1',
+        pass: '527695227eea2c'
+      }
+    }],
   ],
 
   // purgeCSS: {
@@ -119,10 +133,11 @@ export default {
   },
 
   /*
-   ** Nuxt.js Image module config
-   */
-  // image: {
-  // },
+  ** Axios cfg
+  */
+  axios: {
+    baseURL: 'https://api.voetdeluxe.nl'
+  },
 
   /*
    ** Build configuration
