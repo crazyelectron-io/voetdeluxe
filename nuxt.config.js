@@ -136,7 +136,11 @@ export default {
   ** Axios cfg
   */
   axios: {
-    baseURL: 'https://api.voetdeluxe.nl'
+    proxy: true
+  },
+
+  proxy: {
+    '/send/': 'https://api.voetdeluxe.nl'
   },
 
   /*

@@ -108,21 +108,38 @@
         thephone: "",
         theemail: "",
         themessage: "",
+        isSending: false,
       }
     },
     methods: {
-      onSubmit() {
-        console.log("Sending form data")
-        alert("Er is iets fout gegaan. \nProbeer het later opnieuw of bel me op 0652878081")
-        let res = this.$axios.$post('/send', {
-          name: this.thename,
-          email: this.theemail,
-          message: this.themessage,
-          subject: 'VoetDeluxe Contact Form'
-        })
-        let data = res.data;
-        console.log(data);
-      },
-    },
+      async onSubmit() {
+        console.log("Sending form data:" + this.thename + "," + this.theemail + "," + this.thephone + "," + this.themessage + ".")
+        try {
+          await this.$axios.$post('/send/', {
+            name: this.thename,
+            email: this.theemail,
+            message: "Telefoon: " + this.thephone + "." + "Bericht:" + this.themessage,
+            subject: 'VoetDeluxe Contact Formulier'
+          })
+          alert("Bedankt voor uw bericht.\nIk neem spoedig contact met u op.")
+          let data = res.data;
+          console.log(data);
+          // Resetting Values
+          this.thename = this.theemail = this.thephone = this.themessage = ''
+          // Wait until the models are updated in the UI
+          this.$nextTick(() => {
+            this.$refs.form.reset();
+          });
+        } catch(error) {
+          console.log(error)  // eslint-disable-line
+          // Error is an HTTP error
+          if (error.response) {
+            alert(error.response.errorMessage)
+          } else {
+            alert('Er is iets fout gegaan; probeer het later nog eens.\nOf neem contact met op telefoonnummer 06-52878081.')
+          }
+        }
+      }
+    }
   }
 </script>
