@@ -96,6 +96,8 @@ export default {
 
   googleAnalytics: {
     id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
+    dev: false,   // Turn development mode on to disable GA
+    checkDuplicatedScript: true,
   },
 
   /*

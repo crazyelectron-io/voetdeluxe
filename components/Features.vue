@@ -12,7 +12,9 @@
         background="bg-white"
         content="Mijn naam is Arniël Moerman. Met heel veel enthousiasme ben ik dit jaar gestart als pedicure in de regio Voorne, na mijn gehele carriere in de ouderenzorg gewerkt te hebben. De opleiding van 9 maanden tot professionele pedicure rond ik binnenkort af met een laatste examen in juni. Mensen zien mij als een enthousiast en zorgzaam persoon, die ook graag een praatje maakt. Ik wil uw voeten goed verzorgen en gezond maken met alle aandacht en tijd die ze verdienen. Vanuit mijn woonplaats Brielle werk ik ambulant in de regio Brielle, Westvoorne en een deel van Hellevoetsluis."
       >
-        <img src="~assets/img/travel-booking.svg?inline" alt slot="svg" >
+        <template v-slot:image>
+          <img src="~assets/img/arniel.jpg" >
+        </template>
       </feature-right>
       <feature-left
         headline="Kwaliteit, tijd en aandacht"
