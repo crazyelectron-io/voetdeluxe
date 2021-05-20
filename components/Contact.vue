@@ -18,7 +18,7 @@
             </label>
             <div class="mt-1">
               <input
-                id="name"
+                id="username"
                 name="name"
                 type="text"
                 required
@@ -60,6 +60,8 @@
             </label>
             <div class="mt-1">
               <textarea
+                name="message"
+                id="usermessage"
                 class="form-textarea mt-1 block w-full text-gray-400 bg-white"
                 rows="3"
                 placeholder="Type hier uw eventuele vraag of opmerking"
@@ -104,38 +106,27 @@
   export default {
     data() {
       return {
-        thename: "",
-        thephone: "",
-        theemail: "",
-        themessage: "",
+        username: "",
+        phone: "",
+        email: "",
+        usermessage: "",
         isSending: false,
       }
     },
     methods: {
       async onSubmit() {
-        console.log("Sending form data:" + this.thename + "," + this.theemail + "," + this.thephone + "," + this.themessage + ".")
+        console.info(`Sending form data: ${username.value}, ${email.value}, ${phone.value}, ${usermessage.value}`)
         try {
           await this.$axios.$post('/send/', {
-            name: this.thename,
-            email: this.theemail,
-            message: "Telefoon: " + this.thephone + "." + "Bericht:" + this.themessage,
+            name: username.value,
+            email: email.value,
+            text: "Telefoon: " + phone.value + ". Bericht:" + usermessage.value,
             subject: 'VoetDeluxe Contact Formulier'
           })
           alert("Bedankt voor uw bericht.\nIk neem spoedig contact met u op.")
-          // Resetting Values
-          this.thename = this.theemail = this.thephone = this.themessage = ''
-          // Wait until the models are updated in the UI
-          this.$nextTick(() => {
-            this.$refs.form.reset();
-          });
         } catch(error) {
           console.log(error)  // eslint-disable-line
-          // Error is an HTTP error
-          if (error.response) {
-            alert(error.response.errorMessage)
-          } else {
-            alert('Er is iets fout gegaan; probeer het later nog eens.\nOf neem contact met op telefoonnummer 06-52878081.')
-          }
+          alert('Er is iets fout gegaan; probeer het later nog eens.\nOf neem contact met via telefoonnummer 06-52878081.')
         }
       }
     }
