@@ -94,8 +94,8 @@ export default {
     '@nuxtjs/axios',
   ],
 
-  googleAnalyics: {
-    id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
 
   publicRuntimeConfig: {
