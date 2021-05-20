@@ -10,22 +10,12 @@
           <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
             <div class="px-5 py-2">
               <a to="#" class="text-base text-white hover:text-orange">
-                About
+                Over VoetDeluxe
               </a>
             </div>
             <div class="px-5 py-2">
               <a href="#" class="text-base text-white hover:text-orange">
                 ProVoet
-              </a>
-            </div>
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-white hover:text-orange">
-                Jobs
-              </a>
-            </div>
-            <div class="px-5 py-2">
-              <a href="#" class="text-base text-white hover:text-orange">
-                Press
               </a>
             </div>
             <div class="px-5 py-2">
