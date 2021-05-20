@@ -116,17 +116,47 @@
     methods: {
       async onSubmit() {
         console.info(`Sending form data: ${username.value}, ${email.value}, ${phone.value}, ${usermessage.value}`)
-        try {
-          await this.$axios.$post('/send/', {
+        let token = ''
+        let reportError = false
+        await this.$axios.post('/aanmelden/', {
+          name: 'VoetDeluxe',
+          password: 'Pandora1'
+        }).then(function (response) {
+          token = response.data.token
+          reportError = false
+        }).catch(function (e) {
+          console.error('API login error ', e)
+          reportError = true
+        })
+        // Set token in cookie
+        document.cookie = `token=${token}`
+        // Send form data
+        await this.$axios.$post('/send/', {
             name: username.value,
             email: email.value,
             text: "Telefoon: " + phone.value + ". Bericht:" + usermessage.value,
             subject: 'VoetDeluxe Contact Formulier'
-          })
+        },
+        {
+          headers: {
+            'authorization': 'Bearer ' + token,
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+          }
+        }).then(function (response) {
+          console.log("Form submission succeeded")
+          reportError = false
+          username.value = email.value = phone.value = usermessage.value = ''
+        }).catch(function (e) {
+          console.log('Send email error ', e)
+          reportError = true
+        })
+        // Tell user if it succeeded
+        if (!reportError) {
           alert("Bedankt voor uw bericht.\nIk neem spoedig contact met u op.")
-        } catch(error) {
-          console.log(error)  // eslint-disable-line
-          alert('Er is iets fout gegaan; probeer het later nog eens.\nOf neem contact met via telefoonnummer 06-52878081.')
+        }
+        else {
+          alert("Sorry, er is iets mis gegaan. Probeer het later opnieuw, of\nneem contact op via 06-52878081 of email info@voetdeluxe.nl.")
         }
       }
     }

@@ -140,7 +140,8 @@ export default {
   },
 
   proxy: {
-    '/send/': 'https://api.voetdeluxe.nl'
+    '/send/': 'https://api.voetdeluxe.nl',
+    '/aanmelden/': 'https://api.voetdeluxe.nl'
   },
 
   /*
