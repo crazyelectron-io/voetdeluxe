@@ -60,11 +60,6 @@ export default {
   // },
 
   /*
-   ** Customize the progress-bar color
-   */
-  // loading: { color: '#fff' },
-
-  /*
    ** Global CSS: https://go.nuxtjs.dev/config-css
    */
   css: [
@@ -93,43 +88,35 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    // Doc: https://image.nuxtjs.org/setup/
-    // '@nuxt/image',
     // Docs: https://google-analytics.nuxtjs.org/setup
-    // '@nuxtjs/google-analytics',
+    '@nuxtjs/google-analytics',
   ],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
-    // 'nuxt-svg-loader',
-    // 'css.escape',
+    'css.escape',
     ['vue-scrollto/nuxt', { duration: 600 }],
     '@nuxtjs/axios',
-    ['nuxt-mail', {
-      message: {
-        to: 'info@voetdeluxe.nl',
-      },
-      smtp: {
-        host: "smtp.mailtrap.io",
-        port: 2525,
-      },
-      secure: false,
-      auth: {
-        user: '595e32d8eb41f1',
-        pass: '527695227eea2c'
-      }
-    }],
+    // ['nuxt-mail', {
+    //   message: {
+    //     to: 'info@voetdeluxe.nl',
+    //   },
+    //   smtp: {
+    //     host: "smtp.mailtrap.io",
+    //     port: 2525,
+    //   },
+    //   secure: false,
+    //   auth: {
+    //     user: '595e32d8eb41f1',
+    //     pass: '527695227eea2c'
+    //   }
+    // }],
   ],
 
-  // purgeCSS: {
-  //   whitelist: ['hidden'],
-  //   whitelistPatterns: [/md:w-[1-6]/],
-  // },
-
   googleAnalyics: {
-    id: 'UA-XXXXX-X'
+    id: 'UA-197560367-1'
   },
 
   /*
@@ -138,7 +125,6 @@ export default {
   axios: {
     proxy: true
   },
-
   proxy: {
     '/send/': 'https://api.voetdeluxe.nl',
     '/aanmelden/': 'https://api.voetdeluxe.nl'
@@ -154,18 +140,8 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ],
     },
-    // loaders: {
-    //   file: { esModule: false },
-    //   imgUrl: { esModule: false },
-    // },
     // You can extend webpack config here
     extend(config, ctx) {
-      // config.resolve.symlinks = false
-      // loaders: {
-      //   file: {
-      //     esModule: false
-      //   }
-      // }
     }
   },
 
@@ -176,6 +152,11 @@ export default {
         .map((file) => file.replace(".js", ".ts"));
     }
   },
+
+  // purgeCSS: {
+  //   whitelist: ['hidden'],
+  //   whitelistPatterns: [/md:w-[1-6]/],
+  // },
 
   /*
    ** Manifest configuration
