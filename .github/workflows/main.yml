@@ -22,6 +22,8 @@ jobs:
         id: docker_build
         uses: docker/build-push-action@v2
         with:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
           context: ./
           file: ./Dockerfile
           push: true
