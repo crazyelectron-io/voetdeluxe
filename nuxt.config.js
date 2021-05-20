@@ -98,12 +98,6 @@ export default {
     id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
   },
 
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
-  },
-
   /*
   ** Axios cfg
   */
