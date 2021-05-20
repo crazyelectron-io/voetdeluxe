@@ -16,6 +16,7 @@ services:
     environment:
       - PUID=1001
       - GUID=1002
+      - GOOGLE_ANALYTICS_ID
     restart: unless-stopped
     labels:
       - "traefik.enable=true"
