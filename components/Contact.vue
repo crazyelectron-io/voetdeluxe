@@ -122,8 +122,6 @@
             subject: 'VoetDeluxe Contact Formulier'
           })
           alert("Bedankt voor uw bericht.\nIk neem spoedig contact met u op.")
-          let data = res.data;
-          console.log(data);
           // Resetting Values
           this.thename = this.theemail = this.thephone = this.themessage = ''
           // Wait until the models are updated in the UI
