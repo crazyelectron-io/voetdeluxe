@@ -53,13 +53,6 @@ export default {
   },
 
   /*
-   ** Router configuration
-   */
-  // router: {
-  //   mode: 'history'
-  // },
-
-  /*
    ** Global CSS: https://go.nuxtjs.dev/config-css
    */
   css: [
@@ -99,26 +92,17 @@ export default {
     'css.escape',
     ['vue-scrollto/nuxt', { duration: 600 }],
     '@nuxtjs/axios',
-    // ['nuxt-mail', {
-    //   message: {
-    //     to: 'info@voetdeluxe.nl',
-    //   },
-    //   smtp: {
-    //     host: "smtp.mailtrap.io",
-    //     port: 2525,
-    //   },
-    //   secure: false,
-    //   auth: {
-    //     user: '595e32d8eb41f1',
-    //     pass: '527695227eea2c'
-    //   }
-    // }],
   ],
 
   googleAnalyics: {
-    id: 'UA-197560367-1'
+    id: process.env.GOOGLE_ANALYTICS_ID, // Use as fallback if no runtime config is provided
   },
 
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  }
   /*
   ** Axios cfg
   */
