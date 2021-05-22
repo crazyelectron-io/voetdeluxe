@@ -1,6 +1,5 @@
 <template>
   <div>
-    <hero />
     <features />
     <acties />
     <behandelingen />

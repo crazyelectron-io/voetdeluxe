@@ -11,64 +11,59 @@
         Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081 of mailen op info@voetdeluxe.nl.
       </div>
       <div class="flex flex-col sm:flex-row justify-center pt-12 my-6 sm:my-2">
-        <form class="mb-0 space-y-6" action="#" method="POST">
+        <form class="mb-0 space-y-6" action="" method="POST">
           <div>
-            <label for="name" class="block text-md font-medium text-gray">
-              Naam
-            </label>
-            <div class="mt-1">
+            <div class="mt-1 flex p-4 text-gray font-medium text-md relative">
+              <!-- <span class="flex leading-normal bg-white px-2 border-0 rounded rounded-r-none text-2xl text-orange-500">
+                <font-awesome-icon :icon="['fas', 'user']" class="absolute top-6 left-10 z-20" />
+              </span> -->
               <input
                 id="username"
                 name="name"
                 type="text"
                 required
-                class="bg-white"
+                class="bg-white z-0 pl-10 placeholder-gray-300 shadow-md focus:placeholder-gray-100"
+                placeholder="Naam"
               />
             </div>
           </div>
           <div>
-            <label for="email" class="block text-md font-medium text-gray">
-              E-mailadres
-            </label>
-            <div class="mt-1">
+            <div class="mt-1 flex p-4 text-md text-gray font-medium text-md relative">
               <input
                 id="email"
                 name="email"
                 type="email"
                 autocomplete="email"
-                class="bg-white"
+                class="bg-white z-0 pl-10 placeholder-gray-300 shadow-md focus:placeholder-gray-100"
+                placeholder="Email"
               />
             </div>
           </div>
           <div>
-            <label for="phone" class="block text-md font-medium text-gray">
-              Telefoon
-            </label>
-            <div class="mt-1">
+            <div class="mt-1 flex p-4 text-md text-blue font-medium text-md relative">
               <input
                 id="phone"
                 name="phone"
                 type="tel"
                 required
-                class="bg-white"
+                class="bg-white z-0 pl-10 placeholder-gray-300 shadow-md focus:placeholder-gray-100"
+                placeholder="Telefoon"
               />
             </div>
           </div>
           <div>
-            <label for="textarea" class="block text-md font-medium text-gray">
-              Vraag
-            </label>
-            <div class="mt-1">
+           <div class="mt-1 flex p-4 text-md text-gray font-medium text-md relative">
+            <span class="flex leading-normal bg-white px-2 border-0 rounded rounded-r-none text-2xl text-orange-600" />
               <textarea
                 name="message"
                 id="usermessage"
-                class="form-textarea mt-1 block w-full text-gray-400 bg-white"
+                class="form-textarea mt-1 block w-full text-gray-400 bg-white placeholder-gray-300 shadow-md focus:placeholder-gray-100"
                 rows="3"
                 placeholder="Type hier uw eventuele vraag of opmerking"
               ></textarea>
             </div>
           </div>
-          <div class="flex items-center">
+          <div class="flex items-center px-10 relative">
             <input
               id="terms-and-privacy"
               name="terms-and-privacy"
@@ -82,7 +77,7 @@
                 Voorwaarden
               </nuxt-link>
               en
-              <nuxt-link to="#" class="text-orange hover:text-blue">
+              <nuxt-link to="/privacy/" class="text-orange hover:text-blue">
                 Privacy regels
               </nuxt-link>
             </label>
@@ -90,8 +85,8 @@
           <div>
             <button
               type="submit"
-              class="w-full py-2 font-medium bg-orange text-white border-gray-300 rounded-lg shadow-sm focus:border-gray-200 focus:ring-gray-200"
-              @click.prevent="onSubmit"
+              class="w-full py-2 font-medium bg-orange text-white border-gray-300 rounded-lg shadow-sm focus:border-gray-200 focus:ring-gray-200 btn"
+              @click="onSubmit"
             >
               Verzend
             </button>
@@ -162,3 +157,12 @@
     }
   }
 </script>
+<style scoped>
+/* Adding transformation when the button is active */
+  .btn:active {
+      transform: scale(0.98);
+      /* Scaling button to 0.98 to its original size */
+      box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+      /* Lowering the shadow */
+  }
+</style>

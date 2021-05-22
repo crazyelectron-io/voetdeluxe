@@ -18,6 +18,9 @@
   h2 {
       @apply text-xl;
   }
+  active-link {
+    @apply no-underline;
+  }
 
   /* Set default styling for forms elements */
   [type='text'],

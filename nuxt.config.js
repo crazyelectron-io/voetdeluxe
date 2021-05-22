@@ -60,14 +60,20 @@ export default {
   ],
 
   /*
+  ** Router configuration
+  */
+ router: {
+  fallback: true,   // fallback to refresh on old browsers
+  linkActiveClass: 'active-link',
+  mode: 'history',
+ },
+
+  /*
    ** Plugins to load before mounting the App: https://go.nuxtjs.dev/config-plugins
    */
   plugins: [
     // '~/plugins/vuelidate',
-  ],
-
-  serverMiddleware: [
-    // '~/api/v1/send-email.js'
+    { src: "@/plugins/aos", mode: "client" },
   ],
 
   /*
@@ -90,13 +96,13 @@ export default {
    */
   modules: [
     'css.escape',
-    ['vue-scrollto/nuxt', { duration: 600 }],
+    ['vue-scrollto/nuxt', { duration: 700 }],
     '@nuxtjs/axios',
   ],
 
   googleAnalytics: {
-    id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
-    dev: false,   // Turn development mode on to disable GA
+    id: 'UA-197560367-1',         // Use as fallback if no runtime config is provided
+    dev: false,                   // Turn development mode on to disable GA
     checkDuplicatedScript: true,
   },
 
@@ -134,10 +140,11 @@ export default {
     }
   },
 
-  // purgeCSS: {
-  //   whitelist: ['hidden'],
-  //   whitelistPatterns: [/md:w-[1-6]/],
-  // },
+  purgeCSS: {
+    whitelist: ['hidden'],
+    whitelistPatterns: [/md:w-[1-6]/],
+    whitelist: ["aos-init", "aos-animate", "data-aos-delay", "data-aos-duration", "fade-up", "zoom-in"],
+  },
 
   /*
    ** Manifest configuration

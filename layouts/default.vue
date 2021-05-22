@@ -1,6 +1,7 @@
 <template>
   <div class="leading-normal tracking-normal text-white bg-orange">
     <the-header />
+    <hero />
     <nuxt />
     <the-footer />
   </div>
@@ -9,6 +10,7 @@
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
+require('css.escape')
 
 export default {
   components: {

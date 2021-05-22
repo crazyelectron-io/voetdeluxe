@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-white py-8">
+  <section class="bg-white py-8" id="over">
     <div class="container max-w-5xl mx-auto m-8">
       <h1 class="w-full my-2 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-center text-gray">
         VoetDeluxe - Ambulante pedicure

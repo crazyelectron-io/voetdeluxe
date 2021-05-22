@@ -9,24 +9,40 @@
           </div>
           <nav class="-mx-5 -my-2 flex flex-wrap justify-center">
             <div class="px-5 py-2">
-              <a to="#" class="text-base text-white hover:text-orange">
-                Over VoetDeluxe
-              </a>
+              <nuxt-link
+                to="#"
+                v-scroll-to="{ element: '#contact', duration: 800, offset: -35 }"
+                class="text-base text-white hover:text-orange"
+              >
+                Contact
+              </nuxt-link>
             </div>
             <div class="px-5 py-2">
-              <a href="#" class="text-base text-white hover:text-orange">
+              <nuxt-link
+                to="#"
+                v-scroll-to="{ element: '#over', duration: 800, offset: -35 }"
+                class="text-base text-white hover:text-orange"
+              >
                 ProVoet
-              </a>
+              </nuxt-link>
             </div>
             <div class="px-5 py-2">
-              <a href="#" class="text-base text-white hover:text-orange">
+              <nuxt-link
+                to="#"
+                v-scroll-to="{ element: '#informatie', duration: 800, offset: -35 }"
+                class="text-base text-white hover:text-orange"
+              >
                 Voorwaarden
-              </a>
+              </nuxt-link>
             </div>
             <div class="px-5 py-2">
-              <a href="#" class="text-base text-white hover:text-orange">
+              <nuxt-link
+                to="#"
+                v-scroll-to="{ element: '#informatie', duration: 800, offset: -35 }"
+                class="text-base text-white hover:text-orange"
+              >
                 Privacy
-              </a>
+              </nuxt-link>
             </div>
           </nav>
           <div class="mt-8 flex justify-center space-x-6">
