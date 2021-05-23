@@ -11,7 +11,7 @@
         Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081 of mailen op info@voetdeluxe.nl.
       </div>
       <div class="flex flex-col pt-6 sm:flex-row justify-center mx-auto">
-        <form class="space-y-9">
+        <form class="space-y-9" action="" method="POST">
           <div class="w-full flex rounded-md shadow-md">
             <div class="relative flex-grow focus-within:z-10">
               <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -23,8 +23,9 @@
                 id="username"
                 name="name"
                 type="text"
+                required
+                minlength="5"
                 placeholder="Naam (verplicht)"
-                v-model="username"
                 class="bg-white z-0 pl-10 placeholder-gray-200 shadow-md focus:placeholder-gray-100"
               />
             </div>
@@ -97,7 +98,7 @@
             <button
               type="submit"
               class="w-full py-2 font-medium bg-orange text-white border-gray-300 rounded-lg shadow-lg focus:border-gray-200 focus:ring-gray-200 btn"
-              @click="submit"
+              @click="onSubmit"
             >
               Verstuur
             </button>
@@ -120,45 +121,43 @@
       }
     },
     methods: {
-      async submit(event) {
+      async onSubmit() {
         console.info(`Sending form data: ${username.value}, ${email.value}, ${phone.value}, ${usermessage.value}`)
-        event.preventDefault()
         let token = ''
         let reportError = false
-
-        await this.$axios.post('/aanmelden/', {
-          name: 'VoetDeluxe',
-          password: 'Pandora1'
-        }).then(function (response) {
-          token = response.data.token
-          reportError = false
-        }).catch(function (e) {
-          console.error('API login error ', e)
-          reportError = true
-        })
-        // Set token in cookie
-        document.cookie = `token=${token}`
-        // Send form data
-        await this.$axios.$post('/send/', {
-            name: username.value,
-            email: email.value,
-            text: "Telefoon: " + phone.value + ". Bericht:" + usermessage.value,
-            subject: 'VoetDeluxe Contact Formulier'
-        },
-        {
-          headers: {
-            'authorization': 'Bearer ' + token,
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          }
-        }).then(function (response) {
-          console.log("Form submission succeeded")
-          reportError = false
-          username.value = email.value = phone.value = usermessage.value = ''
-        }).catch(function (e) {
-          console.log('Send email error ', e)
-          reportError = true
-        })
+        // await this.$axios.post('/aanmelden/', {
+        //   name: 'VoetDeluxe',
+        //   password: 'Pandora1'
+        // }).then(function (response) {
+        //   token = response.data.token
+        //   reportError = false
+        // }).catch(function (e) {
+        //   console.error('API login error ', e)
+        //   reportError = true
+        // })
+        // // Set token in cookie
+        // document.cookie = `token=${token}`
+        // // Send form data
+        // await this.$axios.$post('/send/', {
+        //     name: username.value,
+        //     email: email.value,
+        //     text: "Telefoon: " + phone.value + ". Bericht:" + usermessage.value,
+        //     subject: 'VoetDeluxe Contact Formulier'
+        // },
+        // {
+        //   headers: {
+        //     'authorization': 'Bearer ' + token,
+        //     'Accept': 'application/json',
+        //     'Content-Type': 'application/json'
+        //   }
+        // }).then(function (response) {
+        //   console.log("Form submission succeeded")
+        //   reportError = false
+        //   username.value = email.value = phone.value = usermessage.value = ''
+        // }).catch(function (e) {
+        //   console.log('Send email error ', e)
+        //   reportError = true
+        // })
         // Tell user if it succeeded
         if (!reportError) {
           // alert("Bedankt voor uw bericht.\nIk neem spoedig contact met u op.")

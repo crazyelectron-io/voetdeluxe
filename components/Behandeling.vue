@@ -1,7 +1,7 @@
 <template>
   <div
     class="w-full md:w-1/2 lg:w-1/3 px-3 pt-6 pb-2 flex flex-col flex-grow flex-shrink"
-    data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" data-aos-once="false"
+    data-aos="fade-up" data-aos-delay="200" data-aos-duration="600" data-aos-once="false"
   >
     <div class="flex-1 bg-white rounded-t-lg overflow-hidden shadow-lg">
       <div class="flex flex-wrap no-underline hover:no-underline">

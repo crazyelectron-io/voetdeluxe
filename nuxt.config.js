@@ -72,8 +72,8 @@ export default {
    ** Plugins to load before mounting the App: https://go.nuxtjs.dev/config-plugins
    */
   plugins: [
-    // '~/plugins/vuelidate',
     { src: "@/plugins/aos", mode: "client" },
+    '@/plugins/vee-validate'
   ],
 
   /*
@@ -98,6 +98,16 @@ export default {
     'css.escape',
     ['vue-scrollto/nuxt', { duration: 700 }],
     '@nuxtjs/axios',
+    ['nuxt-tailvue', {toast: true}],
+    ['nuxt-validate', {
+      lang: 'nl',
+      nuxti18n: {
+        locale: {
+          'nl-NL': 'nl_NL'
+        }
+      }
+      // regular vee-validate options
+    }]
   ],
 
   googleAnalytics: {

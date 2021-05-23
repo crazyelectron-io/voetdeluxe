@@ -24,9 +24,13 @@
     "@nuxtjs/axios": "^5.13.1",
     "@sendgrid/mail": "^7.4.4",
     "@tailwindcss/forms": "^0.3.2",
+    "@tailwindcss/line-clamp": "^0.2.0",
     "aos": "^2.3.4",
     "css.escape": "^1.5.1",
     "nuxt": "^2.14.3",
+    "nuxt-tailvue": "^1.0.90",
+    "nuxt-validate": "^1.0.1",
+    "simple-vue-validator": "^0.16.0",
     "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {

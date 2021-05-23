@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="flex fixed w-full z-50 items-center px-4 h-16 justify-between"
+    class="flex fixed w-full z-40 items-center px-4 h-16 justify-between"
     :class="[isSticky ? 'bg-white shadow-lg' : 'bg-orange']"
     id="home"
   >
@@ -32,7 +32,7 @@
 
     <div class="hidden md:flex md:justify-between md-bg-transparent">
       <nuxt-link
-        class="flex items-center p-3  font-semibold mr-2 text-lg text-center hover:text-gray-900 focus:outline-none focus:text-gray-400"
+        class="flex items-center p-3  font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
         v-scroll-to="{ element: '#behandelingen', duration: 1000, offset: -35 }"
@@ -56,7 +56,7 @@
         <span>Informatie</span>
       </nuxt-link>
       <nuxt-link
-        class="flex items-center p-3 font-semibold mr-2 text-lg text-center hover:text-gray-900 focus:outline-none focus:text-gray-400"
+        class="flex items-center p-3 font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
         v-scroll-to="{ element: '#contact', duration: 1000, offset: -35 }"
@@ -87,7 +87,7 @@
     </transition>
 
     <aside
-      class="transform top-0 left-0 w-72 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-500 z-40"
+      class="transform top-0 left-0 w-72 bg-white fixed h-full overflow-auto ease-in-out transition-all duration-500 z-30"
       :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
     >
       <button

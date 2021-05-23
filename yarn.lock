@@ -902,44 +902,6 @@
     "minimatch" "^3.0.4"
     "strip-json-comments" "^3.1.1"
 
-"@fortawesome/fontawesome-common-types@^0.2.35":
-  "integrity" "sha512-IHUfxSEDS9dDGqYwIW7wTN6tn/O8E0n5PcAHz9cAaBoZw6UpG20IG/YM3NNLaGPwPqgjBAFjIURzqoQs3rrtuw=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.35.tgz"
-  "version" "0.2.35"
-
-"@fortawesome/fontawesome-svg-core@^1.2.27", "@fortawesome/fontawesome-svg-core@^1.2.35", "@fortawesome/fontawesome-svg-core@>= 1.2.0 < 1.3":
-  "integrity" "sha512-uLEXifXIL7hnh2sNZQrIJWNol7cTVIzwI+4qcBIq9QWaZqUblm0IDrtSqbNg+3SQf8SMGHkiSigD++rHmCHjBg=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.35.tgz"
-  "version" "1.2.35"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.35"
-
-"@fortawesome/free-brands-svg-icons@^5.15.3":
-  "integrity" "sha512-1hirPcbjj72ZJtFvdnXGPbAbpn3Ox6mH3g5STbANFp3vGSiE5u5ingAKV06mK6ZVqNYxUPlh4DlTnaIvLtF2kw=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-5.15.3.tgz"
-  "version" "5.15.3"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.35"
-
-"@fortawesome/free-regular-svg-icons@^5.15.3":
-  "integrity" "sha512-q4/p8Xehy9qiVTdDWHL4Z+o5PCLRChePGZRTXkl+/Z7erDVL8VcZUuqzJjs6gUz6czss4VIPBRdCz6wP37/zMQ=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.15.3.tgz"
-  "version" "5.15.3"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.35"
-
-"@fortawesome/free-solid-svg-icons@^5.15.3":
-  "integrity" "sha512-XPeeu1IlGYqz4VWGRAT5ukNMd4VHUEEJ7ysZ7pSSgaEtNvSo+FLurybGJVmiqkQdK50OkSja2bfZXOeyMGRD8Q=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-5.15.3.tgz"
-  "version" "5.15.3"
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.35"
-
-"@fortawesome/vue-fontawesome@^0.1.9":
-  "integrity" "sha512-b2+SLF31h32LSepVcXe+BQ63yvbq5qmTCy4KfFogCYm2bn68H5sDWUnX+U7MBqnM2aeEk9M7xSoqGnu+wSdY6w=="
-  "resolved" "https://registry.npmjs.org/@fortawesome/vue-fontawesome/-/vue-fontawesome-0.1.10.tgz"
-  "version" "0.1.10"
-
 "@fullhuman/postcss-purgecss@^1.1.0":
   "integrity" "sha512-zvfS3dPKD2FAtMcXapMJXGbDgEp9E++mLR6lTgSruv6y37uvV5xJ1crVktuC1gvnmMwsa7Zh1m05FeEiz4VnIQ=="
   "resolved" "https://registry.npmjs.org/@fullhuman/postcss-purgecss/-/postcss-purgecss-1.3.0.tgz"
@@ -1394,14 +1356,6 @@
     "consola" "^2.15.0"
     "eslint-webpack-plugin" "^2.4.1"
 
-"@nuxtjs/fontawesome@^1.1.2":
-  "integrity" "sha512-QAfo7hdc6hiCOohdR861oNQ+riKW/kD22bYyvaC++xXiiC1hBQcrRQ6xXd5gln+6SKCwT09+C4kGjzTgrwtr7w=="
-  "resolved" "https://registry.npmjs.org/@nuxtjs/fontawesome/-/fontawesome-1.1.2.tgz"
-  "version" "1.1.2"
-  dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.27"
-    "@fortawesome/vue-fontawesome" "^0.1.9"
-
 "@nuxtjs/google-analytics@^2.4.0":
   "integrity" "sha512-rDQTwHIjyjVrx8GywHPuWykJ3jRFGaHl5Iqji/y8tQWUc0yGEeHxOoR0yimzxnTS1Ph2/PubQYpgnVeEPEdL/A=="
   "resolved" "https://registry.npmjs.org/@nuxtjs/google-analytics/-/google-analytics-2.4.0.tgz"
@@ -1497,6 +1451,11 @@
   "version" "0.3.2"
   dependencies:
     "mini-svg-data-uri" "^1.2.3"
+
+"@tailwindcss/line-clamp@^0.2.0":
+  "integrity" "sha512-+jXSdRK3/9V/BCPCr+iNpMMhxWMMv62vn/AS2b3/ClmueGuhCijW3bUwO1IiHnE7uCaF74Sli8jUCv9djwvpLg=="
+  "resolved" "https://registry.npmjs.org/@tailwindcss/line-clamp/-/line-clamp-0.2.0.tgz"
+  "version" "0.2.0"
 
 "@types/anymatch@*":
   "integrity" "sha512-/+CRPXpBDpo2RK9C68N3b2cOvO0Cf5B9aPijHsoDQTHivnGSObdOF2BRQOYjojWTDy6nQvMjmqRXIxH55VjxxA=="
@@ -3778,6 +3737,11 @@
   "resolved" "https://registry.npmjs.org/decode-uri-component/-/decode-uri-component-0.2.0.tgz"
   "version" "0.2.0"
 
+"deep-equal@1.0.1":
+  "integrity" "sha1-9dJgKStmDghO/0zbyfCK0yR0SLU="
+  "resolved" "https://registry.npmjs.org/deep-equal/-/deep-equal-1.0.1.tgz"
+  "version" "1.0.1"
+
 "deep-extend@^0.6.0":
   "integrity" "sha512-LOHxIOaPYdHlJRtCQfDIVZtfw/ufM8+rVj649RIHzcm/vGwQRXFt6OPqIFWsm2XEMrNIEtWR64sY1LEKD2vAOA=="
   "resolved" "https://registry.npmjs.org/deep-extend/-/deep-extend-0.6.0.tgz"
@@ -4173,6 +4137,11 @@
   "integrity" "sha1-wsNYJlYkfDnqEHyx5mUrb58kUjw="
   "resolved" "https://registry.npmjs.org/es6-object-assign/-/es6-object-assign-1.1.0.tgz"
   "version" "1.1.0"
+
+"es6-promise@4.0.5":
+  "integrity" "sha1-eILzCt3lskDM+n99eMVIMwlRrkI="
+  "resolved" "https://registry.npmjs.org/es6-promise/-/es6-promise-4.0.5.tgz"
+  "version" "4.0.5"
 
 "escalade@^3.1.1":
   "integrity" "sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw=="
@@ -7394,6 +7363,23 @@
     "purgecss" "^1.1.0"
     "purgecss-webpack-plugin" "^1.4.0"
 
+"nuxt-tailvue@^1.0.90":
+  "integrity" "sha512-JqD5SzCr99hCyxwRkshCiJuYvY699Sj6mBii1XZCRYg6mSg8Pd6nqE09RoZcSf3kbsUgc+pDnR1rw5Z3oCz95A=="
+  "resolved" "https://registry.npmjs.org/nuxt-tailvue/-/nuxt-tailvue-1.0.90.tgz"
+  "version" "1.0.90"
+  dependencies:
+    "tv-button" "latest"
+    "tv-icon" "latest"
+    "tv-modal" "latest"
+    "tv-toast" "latest"
+
+"nuxt-validate@^1.0.1":
+  "integrity" "sha512-bapuCMxQkpQpTkM5wCRhN/qcLpU7Pxlg3c33rA1kstafa3KsCEQ4uEBYSrTbzTCL8HjyihBdJp7P11M8zaWjAw=="
+  "resolved" "https://registry.npmjs.org/nuxt-validate/-/nuxt-validate-1.0.1.tgz"
+  "version" "1.0.1"
+  dependencies:
+    "vee-validate" "^2.1.2"
+
 "nuxt@^2.14.3":
   "integrity" "sha512-7f5adPiIkZvv5Fu7tKhHuKdMv4IvSbBC1sbuBcgjtRedu4rP/tQPL4/8PZcEUieolcfwaN+WGPNz3sMGyPTLzg=="
   "resolved" "https://registry.npmjs.org/nuxt/-/nuxt-2.14.3.tgz"
@@ -9831,6 +9817,14 @@
   dependencies:
     "is-arrayish" "^0.3.1"
 
+"simple-vue-validator@^0.16.0":
+  "integrity" "sha512-M9/Tgprpww/7oEv4qiXavvYVMpx6qrQ+ryJbSDOrXva8yq5SFoDfwbrL3LWGPsnNsFr4cF1y8RW+AAuC018WGg=="
+  "resolved" "https://registry.npmjs.org/simple-vue-validator/-/simple-vue-validator-0.16.0.tgz"
+  "version" "0.16.0"
+  dependencies:
+    "deep-equal" "1.0.1"
+    "es6-promise" "4.0.5"
+
 "slash@^2.0.0":
   "integrity" "sha512-ZYKh3Wh2z1PpEXWr0MpSBZ0V6mZHAQfYevttO11c51CaWjGTaadiKZ+wVt1PbMlDV5qhMFslpZCemhwOK7C89A=="
   "resolved" "https://registry.npmjs.org/slash/-/slash-2.0.0.tgz"
@@ -10720,6 +10714,31 @@
   "resolved" "https://registry.npmjs.org/tty-browserify/-/tty-browserify-0.0.0.tgz"
   "version" "0.0.0"
 
+"tv-button@^1.0.7", "tv-button@latest":
+  "integrity" "sha512-+AHYzKssKb3nMLYNHX3bKJ1eJqfm7CxnfJLrD3dFqr1sHvjHrUJs/TZutB7jOBv6VlF2i+KxpmcgWPLklB2OJg=="
+  "resolved" "https://registry.npmjs.org/tv-button/-/tv-button-1.0.30.tgz"
+  "version" "1.0.30"
+
+"tv-icon@^1.0.1", "tv-icon@latest":
+  "integrity" "sha512-whjtSl9aAN0pVfl+cnHmgz1ArbuQ0aFiCGMbxJN5MHCN2dSuMPm9JMrEebkFROyiMD9MefafBHss1h3pt2M8Og=="
+  "resolved" "https://registry.npmjs.org/tv-icon/-/tv-icon-1.0.22.tgz"
+  "version" "1.0.22"
+
+"tv-modal@latest":
+  "integrity" "sha512-IrHwJ/QV4/POvTd8Opviml8KwrkKKRlJhCdlFb/Oyt0023qwStq1ctSej1xpbiFzNzBuKbT76RshaX5oEW+L8g=="
+  "resolved" "https://registry.npmjs.org/tv-modal/-/tv-modal-1.0.22.tgz"
+  "version" "1.0.22"
+  dependencies:
+    "tv-button" "^1.0.7"
+    "tv-icon" "^1.0.1"
+
+"tv-toast@latest":
+  "integrity" "sha512-LRtLMEC3KKQftfDp0b9o65G0htyjHuMrtJXxGOB2+GZF6c9i9wpZIHZztMVdSVB6Q6qD6PzyqcGc6izzUMqsVw=="
+  "resolved" "https://registry.npmjs.org/tv-toast/-/tv-toast-1.2.29.tgz"
+  "version" "1.2.29"
+  dependencies:
+    "tv-icon" "^1.0.1"
+
 "type-check@^0.4.0", "type-check@~0.4.0":
   "integrity" "sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew=="
   "resolved" "https://registry.npmjs.org/type-check/-/type-check-0.4.0.tgz"
@@ -11048,6 +11067,11 @@
   "resolved" "https://registry.npmjs.org/vary/-/vary-1.1.2.tgz"
   "version" "1.1.2"
 
+"vee-validate@^2.1.2":
+  "integrity" "sha512-4TOsI8XwVkKVLkg8Nhmy+jyoJrR6XcTRDyxBarzcCvYzU61zamipS1WsB6FlDze8eJQpgglS4NXAS6o4NDPs1g=="
+  "resolved" "https://registry.npmjs.org/vee-validate/-/vee-validate-2.2.15.tgz"
+  "version" "2.2.15"
+
 "vendors@^1.0.0":
   "integrity" "sha512-/juG65kTL4Cy2su4P8HjtkTxk6VmJDiOPBufWniqQ6wknac6jNiXS9vU+hO3wgusiyqWlzTbVHi0dyJqRONg3w=="
   "resolved" "https://registry.npmjs.org/vendors/-/vendors-1.0.4.tgz"
@@ -11181,15 +11205,10 @@
   "resolved" "https://registry.npmjs.org/vue-template-es2015-compiler/-/vue-template-es2015-compiler-1.9.1.tgz"
   "version" "1.9.1"
 
-"vue@^2.0.0", "vue@^2.6.11", "vue@~2", "vue@2.x":
+"vue@^2.0.0", "vue@^2.6.11", "vue@2.x":
   "integrity" "sha512-uhmLFETqPPNyuLLbsKz6ioJ4q7AZHzD8ZVFNATNyICSZouqP2Sz0rotWQC8UNBF6VGSCs5abnKJoStA6JbCbfg=="
   "resolved" "https://registry.npmjs.org/vue/-/vue-2.6.12.tgz"
   "version" "2.6.12"
-
-"vuelidate@^0.7.6":
-  "integrity" "sha512-suzIuet1jGcyZ4oUSW8J27R2tNrJ9cIfklAh63EbAkFjE380iv97BAiIeolRYoB9bF9usBXCu4BxftWN1Dkn3g=="
-  "resolved" "https://registry.npmjs.org/vuelidate/-/vuelidate-0.7.6.tgz"
-  "version" "0.7.6"
 
 "vuex@^3.5.1":
   "integrity" "sha512-w7oJzmHQs0FM9LXodfskhw9wgKBiaB+totOdb8sNzbTB2KDCEEwEs29NzBZFh/lmEK1t5tDmM1vtsO7ubG1DFw=="

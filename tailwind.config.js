@@ -79,6 +79,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/line-clamp'),
   ],
   corePlugins: {
     // Disable if these features are not used
@@ -90,6 +91,7 @@ module.exports = {
   purge: {
     content: [  // See nuxt.config.js
       './components/**/*.{vue,js}',
+      './node_modules/tv-toast/**/*.vue',
       './layouts/**/*.vue',
       './pages/**/*.vue',
       './plugins/**/*.{js,ts}',
