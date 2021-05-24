@@ -12,9 +12,9 @@
       <h1 class="w-full py-6 text-2xl md:text-3xl lg:text-4xl leading-tight text-center text-orange-700">
         Privacy verklaring
       </h1>
-      <div class="flex-row bg-white-500 text-gray-600 font-semibold item-center px-4 pb-6">
+      <div class="flex-row bg-white-500 text-gray-600 px-4 pb-6">
         VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In deze privacyverklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br />
-        U kunt er zeker van zijn dat er alles aangedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
+        U kunt er zeker van zijn dat er alles aan gedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
       </div>
       <div
         v-for="(privacy, index) in privacy"
