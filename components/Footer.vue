@@ -38,7 +38,7 @@
             <div class="px-5 py-2">
               <nuxt-link
                 to="#"
-                v-scroll-to="{ element: '#informatie', duration: 800, offset: -35 }"
+                v-scroll-to="{ element: '#privacy', duration: 800, offset: -35 }"
                 class="text-base text-white hover:text-orange"
               >
                 Privacy

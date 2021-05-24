@@ -90,7 +90,7 @@
                     Voorwaarden
                   </nuxt-link>
                   en
-                  <nuxt-link to="#" class="text-orange hover:text-blue">
+                  <nuxt-link to="#" v-scroll-to="{ element: '#privacy', duration: 800, offset: -40 }" class="text-orange hover:text-blue">
                     Privacy regels
                   </nuxt-link>
                 </label>

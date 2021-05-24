@@ -29,8 +29,11 @@
     "css.escape": "^1.5.1",
     "nuxt": "^2.14.3",
     "nuxt-tailvue": "^1.0.90",
+    "postcss-scss": "^2.1.1",
+    "sass": "^1.34.0",
     "vee-validate": "^3.4.5",
-    "vue-scrollto": "^2.20.0"
+    "vue-scrollto": "^2.20.0",
+    "vue-simple-accordion": "^0.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.11.4",
