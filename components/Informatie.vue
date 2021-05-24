@@ -8,24 +8,39 @@
         <div class="h-1 mx-auto gradient w-64 opacity-100 my-0 py-0 rounded-t bg-blue"></div>
       </div>
     </div>
-    <div class="container mx-auto bg-white mt-10 rounded-md shadow-md" id="privacy">
-      <h1 class="w-full py-6 text-2xl md:text-3xl lg:text-4xl leading-tight text-center text-orange-700">
-        Privacy verklaring
-      </h1>
-      <div class="flex-row bg-white-500 text-gray-600 px-4 pb-6">
-        VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In deze privacyverklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br />
-        U kunt er zeker van zijn dat er alles aan gedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
-      </div>
-      <div
-        v-for="(privacy, index) in privacy"
-        :key="privacy.heading"
-      >
-        <p class="bg-white text-orange text-xl font-semibold py-2 px-4 cursor-pointer"
-          @click="privacyItemClick(index)">
-          {{ privacy.heading }}
+
+    <div class="md:flex shadow-lg mx-6 md:mx-auto my-8 max-w-lg md:max-w-4xl">
+      <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg">
+      <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+        <div class="flex items-center">
+          <h2 class="text-xl text-gray-800 font-medium mr-auto">Privacyverklaring</h2>
+        </div>
+        <p class="text-sm text-gray-700 mt-4">
+          VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In de privacy verklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br>
+          U kunt er zeker van zijn dat er alles aan gedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
         </p>
-        <div :data-privacy-id="index" class="bg-white p-1 text-gray-600 px-6 hidden">
-          <span v-html="privacy.details"></span>
+        <div class="flex items-center justify-end mt-4 top-auto">
+          <button
+            class="text-blue-600 px-4 py-2 mr-auto hover:text-orange-600 active:outline-none focus:outline-none"
+            @click='showHide'
+          >
+            {{ showHideText }}
+          </button>
+        </div>
+
+        <div id="privacy-details" class="flex-col mx-auto hidden">
+          <div
+            v-for="(privacy, index) in privacy"
+            :key="privacy.heading"
+          >
+            <p class="bg-white text-orange text-xl font-semibold py-2 px-4 cursor-pointer"
+              @click="privacyItemClick(index)">
+              {{ privacy.heading }}
+            </p>
+            <div :data-privacy-id="index" class="bg-white p-1 text-gray-600 px-6 hidden">
+              <span v-html="privacy.details"></span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -37,7 +52,7 @@ export default {
   name: 'Informatie',
   data() {
     return {
-      active: false,
+      showHideText: 'Lees hier de volledige verklaring...',
       privacy: [
         {
           heading: 'Welke gegevens worden verwerkt?',
@@ -122,6 +137,20 @@ export default {
       } else {
         privacyInfoElement.classList.remove('hidden')
         privacyInfoElement.classList.add('block')
+      }
+    },
+    showHide () {
+      const privacyDetails = document.querySelector('#privacy-details')
+      console.info(privacyDetails)
+      if (privacyDetails.classList.contains('block')) {
+        privacyDetails.classList.remove('block')
+        privacyDetails.classList.add('hidden')
+        this.showHideText = 'Lees hier de volledige verklaring...'
+      }
+      else {
+        privacyDetails.classList.remove('hidden')
+        privacyDetails.classList.add('block')
+        this.showHideText = 'Verberg de privacyverklaring...'
       }
     }
   }
