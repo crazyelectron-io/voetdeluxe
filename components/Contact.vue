@@ -13,7 +13,7 @@
       </div>
       <!-- Contact Form -->
       <div class="flex flex-col pt-6 sm:flex-row justify-center mx-auto">
-        <ValidationObserver v-slot="{ invalid, handleSubmit, reset }">
+        <ValidationObserver v-slot="{ invalid, handleSubmit, reset }" ref="contact">
           <form class="space-y-9" @submit.prevent="handleSubmit(onSubmit)">
             <div class="w-full flex flex-row mb-8">
               <select v-model="aanhef" class="w-1/5 h-10 text-base mr-6 placeholder-gray-600 border rounded-md shadow-md appearance-none focus:shadow-outline bg-white" placeholder="Mw.">
@@ -171,7 +171,8 @@
 
         // Tell user if it succeeded
         if (!reportError) {
-          this.voorletter = this.naam = this.emailadres = this.telefoon = this.bericht = ''
+          this.voorletter = this.naam = this.emailadres = this.telefoon = this.bericht = this.akkoord = ''
+          this.$refs.contact.reset();
           this.$toast.show({
             type: 'success',
             message: 'Bedankt voor uw bericht. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Ik neem spoedig contact met u op.',
