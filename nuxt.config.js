@@ -73,7 +73,8 @@ export default {
    */
   plugins: [
     { src: "@/plugins/aos", mode: "client" },
-    '@/plugins/vee-validate'
+    '@/plugins/vee-validate',
+    // {src: '~/plugins/vuelidate.js', mode: 'client'}
   ],
 
   /*
@@ -99,15 +100,6 @@ export default {
     ['vue-scrollto/nuxt', { duration: 700 }],
     '@nuxtjs/axios',
     ['nuxt-tailvue', {toast: true}],
-    ['nuxt-validate', {
-      lang: 'nl',
-      nuxti18n: {
-        locale: {
-          'nl-NL': 'nl_NL'
-        }
-      }
-      // regular vee-validate options
-    }]
   ],
 
   googleAnalytics: {
@@ -137,6 +129,7 @@ export default {
         ['@babel/plugin-proposal-private-methods', { loose: true }]
       ],
     },
+    transpile: ["vee-validate/dist/rules"],
     // You can extend webpack config here
     extend(config, ctx) {
     }
