@@ -35,7 +35,7 @@
         class="flex items-center p-3  font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
-        v-scroll-to="{ element: '#behandelingen', duration: 1000, offset: -35 }"
+        v-scroll-to="{ element: '#behandelingen', duration: 800, offset: -35 }"
       >
         <span>Behandelingen</span>
       </nuxt-link>
@@ -43,7 +43,7 @@
         class="flex items-center p-3 font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
-        v-scroll-to="{ element: '#producten', duration: 1000, offset: -35 }"
+        v-scroll-to="{ element: '#producten', duration: 800, offset: -35 }"
       >
         <span>Producten</span>
       </nuxt-link>
@@ -51,7 +51,7 @@
         class="flex items-center p-3 font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
-        v-scroll-to="{ element: '#informatie', duration: 1000, offset: -35 }"
+        v-scroll-to="{ element: '#informatie', duration: 800, offset: -35 }"
       >
         <span>Informatie</span>
       </nuxt-link>
@@ -59,7 +59,7 @@
         class="flex items-center p-3 font-semibold mr-2 text-lg text-center hover:text-blue focus:outline-none focus:text-gray-400"
         :class="navTextColor"
         to="#"
-        v-scroll-to="{ element: '#contact', duration: 1000, offset: -35 }"
+        v-scroll-to="{ element: '#contact', duration: 800, offset: -10 }"
       >
         <span>Contact</span>
       </nuxt-link>
@@ -128,7 +128,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: '#home', duration: 1000, offset: -35 }"
+          v-scroll-to="{ element: '#home', duration: 800, offset: -35 }"
         >
           Home
         </nuxt-link>
@@ -154,7 +154,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: 'behandelingen', duration: 1000, offset: -35 }"
+          v-scroll-to="{ element: 'behandelingen', duration: 800, offset: -35 }"
         >
           Behandelingen
         </nuxt-link>
@@ -180,7 +180,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: '#producten', duration: 1000, offset: -35 }"
+          v-scroll-to="{ element: '#producten', duration: 800, offset: -35 }"
         >
           Producten
         </nuxt-link>
@@ -206,7 +206,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: '#informatie', duration: 1000, offset: -35 }"
+          v-scroll-to="{ element: '#informatie', duration: 800, offset: -35 }"
         >
           Informatie
         </nuxt-link>
@@ -232,7 +232,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: '#contact', duration: 1000, offset: -35 }"
+          v-scroll-to="{ element: '#contact', duration: 800, offset: -10 }"
         >
           Contact
         </nuxt-link>

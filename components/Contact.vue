@@ -8,7 +8,7 @@
       <div class="w-full mb-4">
         <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue"></div>
       </div>
-      <div class="flex text-gray-600 font-semibold text-base mt-0 p-0 mb-6 md:mx-8 justify-center items-start text-center">
+      <div class="flex text-gray-600 font-semibold text-base mt-0 p-0 mb-2 md:mb-6 md:mx-8 justify-center items-start text-center">
         Via onderstaand formulier kunt U contact opnemen om een vraag te stellen of een afspraak te maken. U kunt mij ook direct bellen op 06-52878081 of mailen op info@voetdeluxe.nl.
       </div>
       <!-- Contact Form -->
@@ -16,7 +16,7 @@
         <ValidationObserver v-slot="{ invalid, handleSubmit, reset }" ref="contact">
           <form class="space-y-9" @submit.prevent="handleSubmit(onSubmit)">
             <div class="w-full flex flex-row mb-8">
-              <select v-model="aanhef" class="w-1/5 h-10 text-base mr-6 placeholder-gray-600 border rounded-md shadow-md appearance-none focus:shadow-outline bg-white" placeholder="Mw.">
+              <select v-model="aanhef" class="bg-white z-0 w-1/4 md:w-1/5 h-10 mr-6 py-1 placeholder-gray-200 shadow-md focus:placeholder-gray-100 rounded-md focus:shadow-outline" placeholder="Mw.">
                 <option value="Mw.">Mw.</option>
                 <option value="Dhr.">Dhr.</option>
               </select>
@@ -27,7 +27,7 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                     </svg>
                   </div>
-                  <input id="voorletter" name="voorletter" type="text" placeholder="Voorletter*" v-model="voorletter" class="bg-white z-0 pl-10 placeholder-gray-200 shadow-md   focus:placeholder-gray-100 focus:shadow-outline">
+                  <input id="voorletter" name="voorletter" type="text" placeholder="Voorletter*" v-model="voorletter" class="bg-white z-0 pl-10 placeholder-gray-200 shadow-md focus:placeholder-gray-100 focus:shadow-outline">
                 </div>
                 <span class="text-orange-900 text-sm relative flex-grow">{{ errors[0] }}</span>
               </ValidationProvider>
