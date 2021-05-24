@@ -13,8 +13,8 @@
         Privacy verklaring
       </h1>
       <div class="flex-row bg-white-500 text-gray-600 font-semibold item-center px-4 pb-6">
-        Ambulante pedicurepraktijk VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In deze privacyverklaring geef ik duidelijke en transparante informatie over hoe ik omga met Uw persoonsgegevens.<br />
-        U kunt er zeker van zijn dat ik er alles aan doe om uw privacy te waarborgen en ga daarom zeer zorgvuldig om met uw persoonsgegevens. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
+        VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In deze privacyverklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br />
+        U kunt er zeker van zijn dat er alles aangedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
       </div>
       <div
         v-for="(privacy, index) in privacy"
