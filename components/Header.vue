@@ -154,7 +154,7 @@
         </span>
         <nuxt-link
           to="#"
-          v-scroll-to="{ element: 'behandelingen', duration: 800, offset: -35 }"
+          v-scroll-to="{ element: '#behandelingen', duration: 800, offset: -35 }"
         >
           Behandelingen
         </nuxt-link>

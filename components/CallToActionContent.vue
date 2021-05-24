@@ -25,7 +25,6 @@ export default {
     afspraakButton() {
       var vueScrollTo = require('vue-scrollto')
       var options = {
-        // container: '#container',
         easing: 'ease-in',
         lazy: true,
         offset: -30,
