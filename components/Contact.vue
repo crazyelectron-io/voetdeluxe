@@ -58,7 +58,7 @@
               </div>
               <span class="text-orange-900 text-sm relative flex-grow">{{ errors[0] }}</span>
             </ValidationProvider>
-            <ValidationProvider rules="required" name="telefoon" v-slot="{ errors }">
+            <ValidationProvider rules="required|phone" name="telefoon" v-slot="{ errors }">
               <div class="w-full flex pt-8">
                 <div class="relative flex-grow focus-within:z-10 rounded-md shadow-md ">
                   <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">

@@ -27,6 +27,14 @@ extend('max', {
   message: '{_field_} mag maximaal {length} letter bevatten'
 })
 
+extend('phone', {
+  validate(value) {
+    const regex = /^((\+|00)?31|0(?!0))(\d{9})$/;
+    return regex.test(value.replace(/\D/g, ''));
+  },
+  message: '{_field_} moet een geldig Nederlands nummer bevatten'
+})
+
 extend('required_if', {
   params: ['target'],
   validate(value, { target }) {
