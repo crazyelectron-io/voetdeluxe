@@ -45,7 +45,7 @@ export default {
           'Dit gebeurd ook in het kader van de uitvoering van de behandelovereenkomst. Dat kunnen persoonsgegevens zijn. ' +
           'VoetDeluxe bewaart en gebruikt uitsluitend persoonsgegevens die rechtstreeks door U worden opgegeven of waarvan bij opgave duidelijk is dat ze aan VoetDeluxe worden verstrekt om te verwerken. ' +
           'Afhankelijk van de dienst die U van VoetDeluxe afneemt kunnen één of meerdere van de volgende gegevens verzameld worden: ' +
-          'NAW-gegevens; Geslacht; Geboortedatum; Emailadres; Telefoonnummer; Gegevens betreffende Uw voeten;Tijdstip van uw afspraak.'
+          'NAW-gegevens; Geslacht; Geboortedatum; Emailadres; Telefoonnummer; Gegevens betreffende Uw voeten; Tijdstip van uw afspraak.'
         },
         {
           heading: 'Waarvoor worden de gegevens verwerkt',
