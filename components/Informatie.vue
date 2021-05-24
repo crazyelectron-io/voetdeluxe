@@ -25,7 +25,7 @@
           {{ privacy.heading }}
         </p>
         <div :data-privacy-id="index" class="bg-white p-1 text-gray-600 px-6 hidden">
-          <p>{{ privacy.details }}</p>
+          <span v-html="privacy.details"></span>
         </div>
       </div>
     </div>
@@ -44,18 +44,21 @@ export default {
           details: 'Door het gebruik van deze website en de daarop beschikbare diensten laat U bepaalde gegevens bij mij achter. ' +
           'Dit gebeurd ook in het kader van de uitvoering van de behandelovereenkomst. Dat kunnen persoonsgegevens zijn. ' +
           'VoetDeluxe bewaart en gebruikt uitsluitend persoonsgegevens die rechtstreeks door U worden opgegeven of waarvan bij opgave duidelijk is dat ze aan VoetDeluxe worden verstrekt om te verwerken. ' +
-          'Afhankelijk van de dienst die U van VoetDeluxe afneemt kunnen één of meerdere van de volgende gegevens verzameld worden: ' +
-          'NAW-gegevens; Geslacht; Geboortedatum; Emailadres; Telefoonnummer; Gegevens betreffende Uw voeten; Tijdstip van uw afspraak.'
+          'Afhankelijk van de dienst die U van VoetDeluxe afneemt kunnen één of meerdere van de volgende gegevens verzameld worden:<ul class="list-disc ml-4">' +
+          '<li>NAW-gegevens</li><li>Geslacht</li><li>Geboortedatum</li><li>Emailadres</li><li>Telefoonnummer</li><li>Gegevens betreffende Uw voeten</li>' +
+          '<li>Tijdstip van uw afspraak.</li>'
         },
         {
           heading: 'Waarvoor worden de gegevens verwerkt',
-          details: 'Uw persoonsgegevens worden door medisch pedicure Dorietha van Lent verwerkt ten behoeve van de volgende doeleinden: ' +
-          '- Het geven van de behandelingen; ' +
-          '– Het inplannen van een afspraak; ' +
-          '- Het versturen van afspraakgegevens, herinnering via email of bericht; ' +
-          '- Het opstellen en eventueel versturen van de factuur; ' +
-          '- Het aanmaken van uw dossier om u bij de praktijk in te schrijven; ' +
-          '- Het verbeteren van onze dienstverlening.'
+          details: 'Uw persoonsgegevens worden door medisch pedicure Dorietha van Lent verwerkt ten behoeve van de volgende doeleinden:' +
+          '<ul class="list-disc ml-4">' +
+          '<li>Het geven van de behandelingen</li> ' +
+          '<li>Het inplannen van een afspraak</li>' +
+          '<li>Het versturen van afspraakgegevens, herinnering via email of bericht</li>' +
+          '<li>Het opstellen en eventueel versturen van de factuur</li>' +
+          '<li>Het aanmaken van uw dossier om u bij de praktijk in te schrijven</li>' +
+          '<li>Het verbeteren van onze dienstverlening</li>' +
+          '</ul>'
         },
         {
           heading: 'Verstrekking aan derden',
@@ -79,11 +82,11 @@ export default {
         {
           heading: 'Beveiliging',
           details: 'VoetDeluxe heeft passende technische- en organisatorische maatregelen genomen om persoonsgegevens van U te beschermen tegen onrechtmatige verwerking.'  +
-          'VoetDeluxe heeft ondermeer de volgende maatregelen genomen: ' +
-          '1. Alle personen die namens Pedicure VoetDeluxe van uw gegevens kennis kunnen nemen, zijn gehouden aan geheimhouding daarvan. ' +
-          '2. We hanteren een gebruikersnaam, wachtwoordbeleid plus tweede factor beveiliging op al onze systemen waar Uw gegevens worden bewaard of bewerkt. ' +
-          '3. We versleutelen de gegevens die opgeslagen worden en maken back-ups van de persoonsgegevens om te kunnen herstellen in geval van een storing. ' +
-          '4. De papieren administratie met persoonsgegevens is opgeborgen in een afsluitbare kast.'
+          'VoetDeluxe heeft ondermeer de volgende maatregelen genomen:<ul class="list-decimal ml-4">' +
+          '<li>Alle personen die namens Pedicure VoetDeluxe van uw gegevens kennis kunnen nemen, zijn gehouden aan geheimhouding daarvan.</li>' +
+          '<li>We hanteren een gebruikersnaam, wachtwoordbeleid plus tweede factor beveiliging op al onze systemen waar Uw gegevens worden bewaard of bewerkt.</li>' +
+          '<li>We versleutelen de gegevens die opgeslagen worden en maken back-ups van de persoonsgegevens om te kunnen herstellen in geval van een storing.</li>' +
+          '<li>De papieren administratie met persoonsgegevens is opgeborgen in een afsluitbare kast.</li></ul>'
         },
         {
           heading: 'Google Analytics',
