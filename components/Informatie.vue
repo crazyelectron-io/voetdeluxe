@@ -51,7 +51,6 @@ export default {
   name: 'Informatie',
   data() {
     return {
-      showHideText: 'Lees hier de volledige verklaring...',
       isHidden: true,
       privacy: [
         {
@@ -144,16 +143,10 @@ export default {
       console.info(privacyDetails)
       if (privacyDetails.classList.contains('hidden')) {
         this.isHidden = false
-        // this.showHideText = 'Verberg de privacyverklaring'
-        // console.info('Currently hidden. ClassList =', privacyDetails.classList)
         privacyDetails.classList.remove('hidden')
-        // privacyDetails.classList.add('block')
       }
       else {
         this.isHidden = true
-        // this.showHideText = 'Lees de volledige verklaring'
-        // console.info('Currently visible. ClassList =', privacyDetails.classList)
-        // privacyDetails.classList.remove('block')
         privacyDetails.classList.add('hidden')
       }
     }
