@@ -84,7 +84,7 @@
             <ValidationProvider name="akkoord" rules="required" v-slot="{ errors }">
               <div class="flex items-center px-10 relative">
                 <input id="akkoord" name="akkoord" v-model="akkoord" type="checkbox" required class="" />
-                <label for="terms-and-privacy" class="ml-2 block text-sm text-gray-600">
+                <label for="akkoord" class="ml-2 block text-sm text-gray-600">
                   Ik ga accoord met de
                   <nuxt-link to="#" class="text-orange hover:text-blue">
                     Voorwaarden
