@@ -25,7 +25,8 @@ export default {
       },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'white' },
-      { name: 'apple-mobile-web-app-title', content: 'VoetDeluxe' }
+      { name: 'apple-mobile-web-app-title', content: 'VoetDeluxe' },
+      { name: 'theme-color', content: '#ff8f1f' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -41,7 +42,9 @@ export default {
       // { rel: 'apple-touch-icon', type: 'image/x-icon', sizes: '180x180', href: '/apple-icon-180x180.png' },
       { rel: 'icon', type: 'image/vnd.mirosoft.icon', sizes: '32x32 48x48', href: '/favicon.ico' },
       { rel: 'icon', sizes: '128x128', href: '/favicon.icns' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
+      { rel: 'icon', type: 'image/x-icon', sizes: '192x192', href: '/favicon-192.jpg' },
+      { rel: 'icon', type: 'image/x-icon', sizes: '512x512', href: '/favicon-512.jpg' }
     ],
   },
 
@@ -154,7 +157,11 @@ export default {
    */
   manifest: {
     name: 'VoetDeluxe',
-    desription:
+    start_url: 'https://voetdeluxe/nl?standalone=true',
+    short_name: 'VoetDeluxe',
+    display: 'standalone',
+    prefer_related_application: false,
+    description:
       'Uw pedicure aan huis in de regio Voorne. Met de beste zorg voor uw voeten, of het nu nagels knippen, eelt verwijderen, schimmelnagels behandelen, kloven behandelen, verdikte nagels afvlakken of een voetmassage betreft, VoetDeluxe komt Uw voeten in het comfort van uw eigen huis verzorgen en verwennen.'
   },
 }
