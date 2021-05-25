@@ -9,7 +9,7 @@
       </div>
     </div>
 
-    <div class="md:flex shadow-lg mx-6 md:mx-auto my-8 max-w-lg md:max-w-4xl rounded-lg">
+    <div class="md:flex shadow-lg mx-6 md:mx-12 lg:mx-auto my-8 max-w-lg md:max-w-4xl rounded-lg">
       <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg">
       <div class="w-full md:w-2/3 px-4 py-4 rounded-lg rounded-l-none bg-white">
         <div class="flex items-center">

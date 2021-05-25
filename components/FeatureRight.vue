@@ -1,11 +1,11 @@
 <template>
   <div :class="background" class="flex flex-wrap flex-col-reverse md:flex-row overflow-hidden">
     <div class="w-5/6 md:w-1/2 pt-3 md:pt-6 p-6">
-      <h3 class="text-xl md:text-2xl xl:text-3xl text-gray font-bold leading-none mb-3">
+      <h3 class="text-xl md:text-2xl xl:text-3xl text-orange-600 font-bold leading-none mb-3">
         {{ headline }}
       </h3>
       <p class="text-gray-700 mb-3 md:mb-8">
-        {{ content }}
+        <span v-html="content"></span>
         <br />
       </p>
     </div>
