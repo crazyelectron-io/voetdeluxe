@@ -9,26 +9,25 @@
       </div>
     </div>
 
-    <div class="md:flex shadow-lg mx-6 md:mx-auto my-8 max-w-lg md:max-w-4xl">
+    <div class="md:flex shadow-lg mx-6 md:mx-auto my-8 max-w-lg md:max-w-4xl rounded-lg">
       <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg">
-      <div class="w-full md:w-2/3 px-4 py-4 bg-white rounded-lg">
+      <div class="w-full md:w-2/3 px-4 py-4 rounded-lg rounded-l-none bg-white">
         <div class="flex items-center">
-          <h2 class="text-xl text-gray-800 font-medium mr-auto">Privacyverklaring</h2>
+          <h2 class="text-xl text-gray-600 font-bold mr-auto">Privacyverklaring</h2>
         </div>
         <p class="text-sm text-gray-700 mt-4">
           VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In de privacy verklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br>
           U kunt er zeker van zijn dat er alles aan gedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
         </p>
         <div class="flex items-center justify-end mt-4 top-auto">
-          <button
-            class="text-blue-600 px-4 py-2 mr-auto hover:text-orange-600 active:outline-none focus:outline-none"
+          <button class="px-4 mb-2 py-2 mx-auto w-full md:w-1/2 justify-between font-semibold bg-orange text-white border-gray-300 rounded-lg shadow-lg hover:text-blue-600 focus:border-none focus:ring-none active:outline-none focus:outline-none btn"
             @click='showHide'
           >
-            {{ showHideText }}
+            {{ isHidden ? 'Lees de volledige verklaring' : 'Verberg de privacyverklaring' }}
           </button>
         </div>
 
-        <div id="privacy-details" class="flex-col mx-auto hidden">
+        <div id="privacy-details" class="flex-col mx-auto" :class="[ isHidden ? 'hidden' : 'block']">
           <div
             v-for="(privacy, index) in privacy"
             :key="privacy.heading"
@@ -53,6 +52,7 @@ export default {
   data() {
     return {
       showHideText: 'Lees hier de volledige verklaring...',
+      isHidden: true,
       privacy: [
         {
           heading: 'Welke gegevens worden verwerkt?',
@@ -142,15 +142,19 @@ export default {
     showHide () {
       const privacyDetails = document.querySelector('#privacy-details')
       console.info(privacyDetails)
-      if (privacyDetails.classList.contains('block')) {
-        privacyDetails.classList.remove('block')
-        privacyDetails.classList.add('hidden')
-        this.showHideText = 'Lees hier de volledige verklaring...'
+      if (privacyDetails.classList.contains('hidden')) {
+        this.isHidden = false
+        // this.showHideText = 'Verberg de privacyverklaring'
+        // console.info('Currently hidden. ClassList =', privacyDetails.classList)
+        privacyDetails.classList.remove('hidden')
+        // privacyDetails.classList.add('block')
       }
       else {
-        privacyDetails.classList.remove('hidden')
-        privacyDetails.classList.add('block')
-        this.showHideText = 'Verberg de privacyverklaring...'
+        this.isHidden = true
+        // this.showHideText = 'Lees de volledige verklaring'
+        // console.info('Currently visible. ClassList =', privacyDetails.classList)
+        // privacyDetails.classList.remove('block')
+        privacyDetails.classList.add('hidden')
       }
     }
   }
