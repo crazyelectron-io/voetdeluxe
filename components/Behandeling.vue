@@ -7,7 +7,7 @@
       <div class="flex flex-wrap no-underline hover:no-underline">
         <img
           :src="require(`../assets/img/${image.toLowerCase()}`)"
-          alt=""
+          alt="behandeling"
           class="object-cover h-48 w-full rounded-t-lg"
           data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800" data-aos-once="false"
         >

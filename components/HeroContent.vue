@@ -22,7 +22,7 @@
       </div>
       <!--Right Col-->
       <div class="w-full md:w-3/5 py-6 text-center z-20">
-        <img class="invisible md:visible w-16 md:w-4/5 z-50" src="~/assets/img/hero-picture.png" alt >
+        <img class="invisible md:visible w-16 md:w-4/5 z-50" src="~/assets/img/hero-picture.png" alt="pedicure" >
       </div>
     </div>
   </div>

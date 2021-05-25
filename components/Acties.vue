@@ -13,7 +13,7 @@
         content="Als tijdelijk introductietarief bied ik U een uitgebreide en volledige behandeling aan van uw voeten, hoeveel eelt, kalknagels, likdoorns of nagelriemen ook behandeld moeten worden, <strong>voor de prijs van € 22,95</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn. Zo kunt U het vrijblijvend ervaren."
       >
         <template v-slot:image>
-          <img src="~assets/img/actietarief.png" >
+          <img src="~assets/img/actietarief.png" alt="actietarief">
         </template>
       </actie-left>
     </div>

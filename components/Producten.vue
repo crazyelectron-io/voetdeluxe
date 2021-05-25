@@ -19,14 +19,14 @@
         background="bg-white-800"
         content="Ik voer ondermeer de HFL productlijn. U kunt deze ook binnenkort in dit overzicht aantreffen."
       >
-        <img src="~assets/img/hfl-producten.jpg" alt slot="image" >
+        <img src="~assets/img/hfl-producten.jpg" alt="HFL-producten" slot="image" >
       </product-left>
       <product-right
         headline="Samenwerkende Pedicures productlijn"
         background="bg-white-800"
         content="Ook de productlijn van de Samenwerkende Pedicures kunt U binnenkort in dit overzicht aantreffen."
       >
-        <img src="~assets/img/samenwerkende-pedicures.jpg" alt slot="image">
+        <img src="~assets/img/samenwerkende-pedicures.jpg" alt="SamenwerkendePedicures" slot="image">
       </product-right>
     </div>
   </section>

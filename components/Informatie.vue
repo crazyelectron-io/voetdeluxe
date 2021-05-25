@@ -10,7 +10,7 @@
     </div>
 
     <div class="md:flex shadow-lg mx-6 md:mx-12 lg:mx-auto my-8 max-w-lg sm:max-w-2xl md:max-w-4xl rounded-lg">
-      <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg">
+      <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg" alt="privacyß">
       <div class="w-full md:w-2/3 px-4 py-4 rounded-lg rounded-l-none bg-white">
         <div class="flex items-center">
           <h2 class="text-2xl text-orange-600 font-bold mr-auto">Privacyverklaring</h2>
