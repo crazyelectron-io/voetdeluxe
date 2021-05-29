@@ -1,11 +1,11 @@
 <template>
-  <section class="bg-white py-8" id="over">
-    <div class="container max-w-5xl mx-auto m-8">
-      <h1 class="w-full my-2 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-center text-gray">
+  <section class="py-8 bg-white" id="over">
+    <div class="container max-w-5xl m-8 mx-auto">
+      <h1 class="w-full my-2 text-2xl font-bold leading-tight text-center md:text-3xl lg:text-4xl text-gray">
         VoetDeluxe - Ambulante pedicure
       </h1>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 opacity-100 my-0 py-0 rounded-t bg-blue"></div>
+        <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-100 gradient bg-blue"></div>
       </div>
       <feature-right
         headline="Even voorstellen"
@@ -13,7 +13,7 @@
         content="Mijn naam is Arniël Moerman. Met heel veel enthousiasme ben ik dit jaar gestart als pedicure in de regio Voorne, na mijn gehele carriere in de ouderenzorg gewerkt te hebben. De opleiding van 9 maanden tot professionele pedicure rond ik binnenkort af met een laatste examen in juni. Mensen zien mij als een enthousiast en zorgzaam persoon, die ook graag een praatje maakt.<br>Ik wil uw voeten goed verzorgen en gezond houden met alle aandacht en tijd die ze verdienen. Vanuit mijn woonplaats Brielle werk ik ambulant in de regio Brielle, Zwartewaal, Westvoorne en een deel van Hellevoetsluis."
       >
         <template v-slot:image>
-          <img src="~assets/img/arniel.jpg" class="rounded-2xl" alt="voorstellen">
+          <img src="~assets/img/voetdeluxe-arniel.jpg" class="rounded-2xl" alt="voorstellen">
         </template>
       </feature-right>
       <feature-left

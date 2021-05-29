@@ -1,13 +1,13 @@
 <template>
-  <section class="bg-white text-white py-2" id="behandelingen">
-    <div class="container mx-auto flex flex-wrap w-full py-6">
-      <h1 class="w-full my-2 text-3xl md:text-4xl lg:text-5xl font-bold leading-tight text-center text-gray">
+  <section class="py-2 text-white bg-white" id="behandelingen">
+    <div class="container flex flex-wrap w-full py-6 mx-auto">
+      <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center md:text-4xl lg:text-5xl text-gray">
         Behandelingen
       </h1>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 my-0 py-0 rounded-t bg-blue"></div>
+        <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t gradient bg-blue"></div>
       </div>
-      <behandeling-column :rows="3" image="basisbehandeling.jpg">
+      <behandeling-column :rows="3" image="behandeling-basis.jpg">
         <template v-slot:overline>Maximale behandeltijd 1 uur</template>
         <template v-slot:headline>Basisbehandeling</template>
         <template v-slot:description>
@@ -15,7 +15,7 @@
         </template>
         <template v-slot:treatment>
           <ul class="w-full text-orange-800">
-            <li v-for="(item, index) in listBasis" :key="index" class="border-0 py-0">
+            <li v-for="(item, index) in listBasis" :key="index" class="py-0 border-0">
               {{ item }}.
             </li>
           </ul>
@@ -24,7 +24,7 @@
           <h2 class="font-bold text-gray-700">Prijs: € 30,00 *</h2>
         </template>
       </behandeling-column>
-      <behandeling-column :rows="3" image="voetmassage.jpeg">
+      <behandeling-column :rows="3" image="behandeling-voetmassage.jpeg">
         <template v-slot:overline>Maximale behandeltijd 1,5 uur</template>
         <template v-slot:headline>Luxe behandeling</template>
         <template v-slot:description>
@@ -32,7 +32,7 @@
         </template>
         <template v-slot:treatment>
           <ul class="w-full text-orange-800">
-            <li v-for="(item, index) in listLuxe" :key="index" class="border-0 py-0">
+            <li v-for="(item, index) in listLuxe" :key="index" class="py-0 border-0">
               {{ item }}.
             </li>
           </ul>
@@ -41,7 +41,7 @@
           <h2 class="font-bold text-gray-700">Prijs: € 45,00 *</h2>
         </template>
       </behandeling-column>
-      <behandeling-column :rows="3" image="pedicure.jpg">
+      <behandeling-column :rows="3" image="behandeling-deel.jpg">
         <template v-slot:overline>Maximale behandeltijd 30 minuten</template>
         <template v-slot:headline>Deelbehandeling</template>
         <template v-slot:description>
@@ -49,7 +49,7 @@
         </template>
         <template v-slot:treatment>
           <ul class="w-full text-orange-800">
-            <li v-for="(item, index) in listDeel" :key="index" class="border-0 py-0">
+            <li v-for="(item, index) in listDeel" :key="index" class="py-0 border-0">
               {{ item }}.
             </li>
           </ul>
@@ -59,10 +59,10 @@
         </template>
       </behandeling-column>
     </div>
-    <div class="flex text-gray-400 text-sm justify-center mb-3 px-3 ">
+    <div class="flex justify-center px-3 mb-3 text-sm text-gray-400 ">
       * Exclusief reiskosten, Brielle: € 0,-, Oostvoorne: € 3,00, Rockanje: € 5,00
     </div>
-    <div class="flex text-gray-600 font-semibold text-base mt-0 py-0 mb-6 justify-center px-3 md:px-4">
+    <div class="flex justify-center px-3 py-0 mt-0 mb-6 text-base font-semibold text-gray-600 md:px-4">
       U kunt contant betalen maar ook pinnen met bankpas of telefoon
     </div>
   </section>
