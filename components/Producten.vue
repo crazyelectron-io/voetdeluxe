@@ -1,7 +1,7 @@
 <template>
-  <section class="py-2 text-gray-600 bg-white-800" id="producten">
+  <section class="py-2 text-gray-600 bg-white-800">
     <div class="container flex-grow flex-shrink px-2 pt-4 pb-12 mx-auto text-gray-800 md:py-12">
-      <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center md:text-4xl lg:text-5xl text-gray">
+      <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center md:text-4xl lg:text-5xl text-gray"  id="producten">
         Voetverzorgingsproducten
       </h1>
       <div class="w-full mb-4">
