@@ -8,7 +8,7 @@
           </h3>
         </div>
         <div class="mb-2 aspect-w-16 aspect-h-9">
-          <img :src="require(`../assets/img/${image.toLowerCase()}`)" alt="product" class="object-cover rounded-t-lg shadow-t-md">
+          <img :src="require(`../assets/img/${image.toLowerCase()}`)" alt="product" class="object-cover transition duration-500 transform rounded-t-lg shadow-t-md hover:scale-150">
         </div>
         <div class="">
           <div class="py-1 italic font-semibold text-center text-orange-600 text-md">

@@ -44,7 +44,7 @@
                 Intensieve verzorging van de droge huid, kloofjes, eeltplekken, droge vlekken en de gevoelige huid. Deze zalf ondersteunt het herstellend vermogen van de huid en verzorgd de diepere huidlagen met behulp van je eigen lichaamsvocht. Dit product maakt de ruwe huid weer zacht en glad. Heeft u een droge of ruwe voet dan kunt u dit product combineren met Dermoleen creme. In de ochtend smeren met Dermoleen en in de avond met Roselan Balm.
               </template>
               <template v-slot:price>
-                <h2 class="font-bold text-gray-700">Prijs: € 13,75</h2>
+                <h2 class="font-bold text-gray-700">Prijs: € 13,50</h2>
               </template>
             </product-column>
             <product-column image="product-hfl-fresh-gel.png">
@@ -65,7 +65,7 @@
                 HFL Laboratories gepatenteerde Solution Spray is het product voor de verzorging van Kalknagels die vaak verkleurd of broos zijn. Ook kan de spray gebruikt worden op de huid. Bijvoorbeeld wanneer men de voeten of huid niet goed heeft afgedroogd na het douchen of zwemmen en de huid dus rood en gevoelig kan zijn geworden. De spray maakt de huid en nagels goed schoon en bevat verzorgende bestanddelen.
               </template>
               <template v-slot:price>
-                <h2 class="font-bold text-gray-700">Prijs: € 11,95</h2>
+                <h2 class="font-bold text-gray-700">Prijs: € 12,50</h2>
               </template>
             </product-column>
           </div>
