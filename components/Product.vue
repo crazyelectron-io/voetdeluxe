@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-none w-4/5 gap-8 mr-4 bg-white border rounded-lg shadow-lg cursor-pointer sm:w-3/5 sm:mr-6 md:w-3/5 lg:mr-6 lg:w-1/3 lg:pb-4">
+  <div class="flex-none w-4/5 gap-8 mr-4 bg-white border border-blue-600 rounded-lg cursor-pointer sm:w-3/5 sm:mr-6 md:w-3/5 lg:mr-6 lg:w-1/3 lg:pb-4">
     <div class="flex flex-col justify-between px-4 py-2">
       <div class="flex-1 overflow-hidden bg-white rounded-t-lg">
         <div class="space-y-1 leading-6">
