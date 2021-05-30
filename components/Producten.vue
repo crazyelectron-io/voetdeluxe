@@ -35,7 +35,7 @@
                 Deze verzorgende crème biedt een aangename en effectieve verzorging voor de droge huid. Tevens wordt de crème vaak als bodylotion gebruikt. De Dermoleen Cream behoudt een goede pH-waarde, is vochtregulerend en draagt bij aan de bescherming en hydratatie van de droge huid. Door gebruik te maken van de lichaamseigen stof Ureum wordt er een optimale hydratatie behaalt. Deze stof is herkenbaar voor de huid.
               </template>
               <template v-slot:price>
-                <h2 class="font-bold text-gray-700">Prijs: € 14,50</h2>
+                <h2 class="font-bold text-gray-700">Prijs: € 13,50</h2>
               </template>
             </product-column>
             <product-column image="product-hfl-roselan-balm.png">
@@ -45,7 +45,7 @@
                 Intensieve verzorging van de droge huid, kloofjes, eeltplekken, droge vlekken en de gevoelige huid. Deze zalf ondersteunt het herstellend vermogen van de huid en verzorgt de diepere huidlagen met behulp van het eigen lichaamsvocht. Dit product maakt de ruwe huid weer zacht en glad. Heeft u een droge of ruwe voet dan kunt u dit product combineren met Dermoleen creme: in de ochtend smeren met <i>Dermoleen</i> en in de avond met <i>Roselan Balm</i>.
               </template>
               <template v-slot:price>
-                <h2 class="font-bold text-gray-700">Prijs: € 13,50</h2>
+                <h2 class="font-bold text-gray-700">Prijs: € 12,95</h2>
               </template>
             </product-column>
             <product-column image="product-hfl-fresh-gel.png">

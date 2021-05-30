@@ -3,7 +3,7 @@
     <div class="flex flex-col justify-between px-4 py-2">
       <div class="flex-1 overflow-hidden bg-white rounded-t-lg">
         <div class="space-y-1 leading-6">
-          <h3 class="mb-2 text-lg font-bold text-center text-gray-600 md:text-xl">
+          <h3 class="mb-2 font-bold text-center text-gray-600 text-md sm:text-lg md:text-xl">
             <slot name="headline" />
           </h3>
         </div>
