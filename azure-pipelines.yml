@@ -58,18 +58,17 @@ stages:
       runOnce:
         deploy:
           steps:
-            - script: echo my first deployment
-          # - checkout: self
-          # - script: "docker network ls"
-          # - script: "hostname"
-          # - task: DockerCompose@0
-          #   displayName: Pull updated images
-          #   inputs:
-          #     containerregistrytype: 'Container Registry'
-          #     dockerRegistryEndpoint: 'Docker Hub'
-          #     dockerComposeFile: '**/docker-compose.yml'
-          #     action: 'Run a Docker Compose command'
-          #     dockerComposeCommand: 'pull'
+          - checkout: self
+          - script: "docker network ls"
+          - script: "hostname"
+          - task: DockerCompose@0
+            displayName: Pull updated images
+            inputs:
+              containerregistrytype: 'Container Registry'
+              dockerRegistryEndpoint: 'Docker Hub'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
+              dockerComposeCommand: 'pull'
           # - task: DockerCompose@0
           #   displayName: Deploy to VM with Docker Compose
           #   inputs:
