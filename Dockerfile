@@ -33,8 +33,8 @@ COPY --from=builder /app/static ./static
 ENV NUXT_HOST=0.0.0.0
 
 # set app port
-ENV NUXT_PORT=6800
-EXPOSE 6800
+ENV NUXT_PORT=3000
+EXPOSE 3000
 
 # start the app
 CMD ["npm", "start"]
