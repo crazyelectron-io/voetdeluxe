@@ -59,7 +59,7 @@ stages:
       runOnce:
         deploy:
           steps:
-            script: echo my first deployment
+            - script: echo my first deployment
           # - checkout: self
           # - script: "docker network ls"
           # - script: "hostname"
