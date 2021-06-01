@@ -45,3 +45,36 @@ stages:
         repository: '$(imageName)'
         command: 'push'
         tags: '$(tag)'
+
+# --- Deploy stage
+- stage: DeployVM
+  jobs:
+  - deployment: VMDeploy
+    displayName: Deploy Containers
+    environment:
+      name:  'voetdeluxehomevm'
+      resourceType: VirtualMachine
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          - checkout: self
+          - script: "docker network ls"
+          - script: "hostname"
+          - task: DockerCompose@0
+            displayName: Pull updated images
+            inputs:
+              containerregistrytype: 'Container Registry'
+              dockerRegistryEndpoint: 'Docker Hub'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
+              dockerComposeCommand: 'pull'
+          - task: DockerCompose@0
+            displayName: Deploy to VM with Docker Compose
+            inputs:
+              containerregistrytype: 'Container Registry'
+              dockerRegistryEndpoint: 'Docker Hub'
+              dockerComposeFile: '**/docker-compose.yml'
+              action: 'Run a Docker Compose command'
+              dockerComposeCommand: 'up'
+              arguments: '-d'
