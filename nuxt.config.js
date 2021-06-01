@@ -78,7 +78,7 @@ export default {
     { src: "@/plugins/aos", mode: "client" },
     '@/plugins/vee-validate',
     {
-      src: './plugins/GoogleAnalytics.js',
+      src: './plugins/vue-gtag.js',
       mode: 'client'
     },
   ],
