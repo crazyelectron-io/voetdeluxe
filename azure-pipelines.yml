@@ -52,9 +52,8 @@ stages:
   - deployment: VMDeploy
     displayName: Deploy Containers
     environment:
-      name:  voetdeluxehomevm
+      name:  voetdeluxelinuxvm
       resourceType: VirtualMachine
-      tags: prod
     strategy:
       runOnce:
         deploy:
