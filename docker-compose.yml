@@ -7,7 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: voetdeluxe:latest
+    image: crazyelectron/voetdeluxe:latest
     container_name: voetdeluxe
     networks:
       - traefik-network

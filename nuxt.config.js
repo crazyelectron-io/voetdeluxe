@@ -77,7 +77,10 @@ export default {
   plugins: [
     { src: "@/plugins/aos", mode: "client" },
     '@/plugins/vee-validate',
-    // {src: '~/plugins/vuelidate.js', mode: 'client'}
+    {
+      src: './plugins/GoogleAnalytics.js',
+      mode: 'client'
+    },
   ],
 
   /*
