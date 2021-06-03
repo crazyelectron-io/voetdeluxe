@@ -1,17 +1,17 @@
 <template>
   <nuxt-link
-    class="flex no-underline hover:no-underline font-bold text-2xl lg:text-4xl"
+    class="flex text-2xl font-bold no-underline hover:no-underline lg:text-4xl"
     to="#"
     v-scroll-to="{ element: '#home', duration: 1000, offset: -100 }"
   >
     <img class="h-12" :src="require(`../assets/img/${myLogo.toLowerCase()}`)" alt="VoetDeluxe">
-    <p
+    <div
       v-if="withText"
       :class="classList"
-      class="text-2xl md:text-3xl font-bold p-2"
+      class="p-2 text-2xl font-bold md:text-3xl"
     >
       VoetDeluxe
-    </p>
+    </div>
   </nuxt-link>
 </template>
 

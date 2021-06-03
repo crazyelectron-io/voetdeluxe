@@ -1,5 +1,5 @@
 // nuxt.config.js
-import nuxtConfig from "./nuxt.config";
+import nuxtConfig from './nuxt.config'
 
 export default {
   /*
@@ -13,7 +13,7 @@ export default {
   head: {
     title: 'VoetDeluxe - pedicure aan huis in Brielle, Oostvoorne en Rockanje',
     htmlAttrs: {
-      lang: 'nl'
+      lang: 'nl',
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,12 +21,13 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'Uw voeten in goede handen bij VoetDeluxe, voor eelt, kalknagels, kloven, likdoorns, nagels knippen en voetmassage'
+        content:
+          'Uw voeten in goede handen bij VoetDeluxe, voor eelt, kalknagels, kloven, likdoorns, nagels knippen en voetmassage',
       },
       { name: 'apple-mobile-web-app-capable', content: 'yes' },
       { name: 'apple-mobile-web-app-status-bar-style', content: 'white' },
       { name: 'apple-mobile-web-app-title', content: 'VoetDeluxe' },
-      { name: 'theme-color', content: '#ff8f1f' }
+      { name: 'theme-color', content: '#ff8f1f' },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -44,7 +45,7 @@ export default {
       { rel: 'icon', sizes: '128x128', href: '/favicon.icns' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'icon', type: 'image/x-icon', sizes: '192x192', href: '/favicon-192.jpg' },
-      { rel: 'icon', type: 'image/x-icon', sizes: '512x512', href: '/favicon-512.jpg' }
+      { rel: 'icon', type: 'image/x-icon', sizes: '512x512', href: '/favicon-512.jpg' },
     ],
   },
 
@@ -52,36 +53,27 @@ export default {
    ** Setup port and address
    */
   server: {
-    port: 3000
+    port: 3000,
   },
 
   /*
    ** Global CSS: https://go.nuxtjs.dev/config-css
    */
-  css: [
-    '~/assets/css/tailwind.css'
-  ],
+  css: ['~/assets/css/tailwind.css'],
 
   /*
-  ** Router configuration
-  */
- router: {
-  fallback: true,   // fallback to refresh on old browsers
-  linkActiveClass: 'active-link',
-  mode: 'history',
- },
+   ** Router configuration
+   */
+  router: {
+    fallback: true, // fallback to refresh on old browsers
+    linkActiveClass: 'active-link',
+    mode: 'history',
+  },
 
   /*
    ** Plugins to load before mounting the App: https://go.nuxtjs.dev/config-plugins
    */
-  plugins: [
-    { src: "@/plugins/aos", mode: "client" },
-    '@/plugins/vee-validate',
-    {
-      src: './plugins/vue-gtag.js',
-      mode: 'client'
-    },
-  ],
+  plugins: [{ src: '@/plugins/aos', mode: 'client' }, '@/plugins/vee-validate', { src: './plugins/vue-gtag', mode: 'client' }],
 
   /*
    ** Auto import components: https://go.nuxtjs.dev/config-components
@@ -95,34 +87,29 @@ export default {
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
     // Docs: https://google-analytics.nuxtjs.org/setup
-    '@nuxtjs/google-analytics',
+    // '@nuxtjs/google-analytics',
   ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    'css.escape',
-    ['vue-scrollto/nuxt', { duration: 700 }],
-    '@nuxtjs/axios',
-    ['nuxt-tailvue', {toast: true}],
-  ],
+  modules: ['css.escape', ['vue-scrollto/nuxt', { duration: 700 }], '@nuxtjs/axios', ['nuxt-tailvue', { toast: true }]],
 
   googleAnalytics: {
-    id: 'UA-197560367-1',         // Use as fallback if no runtime config is provided
-    dev: false,                   // Turn development mode on to disable GA
+    id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
+    dev: false, // Turn development mode on to disable GA
     checkDuplicatedScript: true,
   },
 
   /*
-  ** Axios cfg
-  */
+   ** Axios cfg
+   */
   axios: {
-    proxy: true
+    proxy: true,
   },
   proxy: {
     '/send/': 'https://api.voetdeluxe.nl',
-    '/aanmelden/': 'https://api.voetdeluxe.nl'
+    '/aanmelden/': 'https://api.voetdeluxe.nl',
   },
 
   /*
@@ -131,28 +118,22 @@ export default {
   build: {
     // The following fixes an issue with Babel having contradicting 'loose' settings [2021-05-08].
     babel: {
-      plugins: [
-        ['@babel/plugin-proposal-private-methods', { loose: true }]
-      ],
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
     },
-    transpile: ["vee-validate/dist/rules"],
+    transpile: ['vee-validate/dist/rules'],
     // You can extend webpack config here
-    extend(config, ctx) {
-    }
+    extend(config, ctx) {},
   },
 
-  purge: {
-    content(defaultContents) {
-      return defaultContents
-        .map((path) => join(nuxtConfig.srcDir, path))
-        .map((file) => file.replace(".js", ".ts"));
-    }
-  },
+  // purge: {
+  //   content(defaultContents) {
+  //     return defaultContents.map((path) => join(nuxtConfig.srcDir, path)).map((file) => file.replace('.js', '.ts'))
+  //   },
+  // },
 
   purgeCSS: {
-    whitelist: ['hidden'],
+    whitelist: ['hidden', 'aos-init', 'aos-animate', 'data-aos-delay', 'data-aos-duration', 'fade-up', 'zoom-in'],
     whitelistPatterns: [/md:w-[1-6]/],
-    whitelist: ["aos-init", "aos-animate", "data-aos-delay", "data-aos-duration", "fade-up", "zoom-in"],
   },
 
   /*
@@ -165,6 +146,6 @@ export default {
     display: 'standalone',
     prefer_related_application: false,
     description:
-      'Uw pedicure aan huis in de regio Voorne. Met de beste zorg voor uw voeten, of het nu nagels knippen, eelt verwijderen, schimmelnagels behandelen, kloven behandelen, verdikte nagels afvlakken of een voetmassage betreft, VoetDeluxe komt Uw voeten in het comfort van uw eigen huis verzorgen en verwennen.'
+      'Uw pedicure aan huis in de regio Voorne. Met de beste zorg voor uw voeten, of het nu nagels knippen, eelt verwijderen, schimmelnagels behandelen, kloven behandelen, verdikte nagels afvlakken of een voetmassage betreft, VoetDeluxe komt Uw voeten in het comfort van uw eigen huis verzorgen en verwennen.',
   },
 }

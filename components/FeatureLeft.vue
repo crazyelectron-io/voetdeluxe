@@ -1,14 +1,14 @@
 <template>
-  <div :class="background" class="flex flex-wrap flex-col-reverse md:flex-row overflow-hidden">
-    <div class="md:w-1/2 w-5/6 pt-3 md:pt-6 pb-6 px-6 object-cover">
+  <div :class="background" class="flex flex-col-reverse flex-wrap overflow-hidden md:flex-row">
+    <div class="object-cover w-5/6 px-6 pt-3 pb-4 md:w-1/2 md:pt-6">
       <slot name="image" />
     </div>
-    <div class="w-5/6 md:w-1/2 pt-3 md:pt-6 p-6">
+    <div class="w-5/6 p-6 pt-3 md:w-1/2 md:pt-6">
       <div class="align-middle">
-        <h3 class="text-xl md:text-2xl xl:text-3xl text-orange-600 font-bold leading-none mb-3">
+        <h3 class="mb-3 text-xl font-bold leading-none text-orange-600 md:text-2xl xl:text-3xl">
           {{ headline }}
         </h3>
-        <p class="text-gray-700 mb-3 md:mb-8">
+        <p class="mb-3 text-gray-700 md:mb-8">
           <span v-html="content"></span>
         </p>
       </div>

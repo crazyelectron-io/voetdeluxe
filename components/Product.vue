@@ -1,14 +1,20 @@
 <template>
-  <div class="flex-none w-4/5 gap-8 mr-4 bg-white border border-blue-600 rounded-lg cursor-pointer sm:w-3/5 sm:mr-6 md:w-3/5 lg:mr-6 lg:w-1/3 lg:pb-4">
-    <div class="flex flex-col justify-between px-4 py-2">
-      <div class="flex-1 overflow-hidden bg-white rounded-t-lg">
+  <div
+    class="flex-none w-4/5 gap-8 mr-4 bg-white border border-blue-600 rounded-lg cursor-pointer sm:w-3/5 sm:mr-6 md:w-3/5 lg:mr-6 lg:w-1/3 lg:pb-4"
+  >
+    <div class="flex flex-col px-4 py-2">
+      <div class="overflow-hidden bg-white rounded-t-lg">
         <div class="space-y-1 leading-6">
           <h3 class="mb-2 font-bold text-center text-gray-600 text-md sm:text-lg md:text-xl">
             <slot name="headline" />
           </h3>
         </div>
         <div class="mb-2 aspect-w-16 aspect-h-9">
-          <img :src="require(`../assets/img/${image.toLowerCase()}`)" alt="product" class="object-cover transition transform rounded-t-lg duration-600 shadow-t-md hover:scale-150">
+          <img
+            :src="require(`../assets/img/${image.toLowerCase()}`)"
+            alt="product"
+            class="object-cover transition transform rounded-t-lg duration-600 shadow-t-md hover:scale-150"
+          >
         </div>
         <div class="">
           <div class="py-1 italic font-semibold text-center text-orange-600 text-md">
@@ -20,7 +26,7 @@
         </div>
       </div>
       <div>
-        <div class="items-center flex-1 p-6 mt-auto overflow-hidden">
+        <div class="items-center justify-end p-6 mt-auto overflow-hidden">
           <div class="">
             <slot name="price" />
           </div>
