@@ -73,7 +73,11 @@ export default {
   /*
    ** Plugins to load before mounting the App: https://go.nuxtjs.dev/config-plugins
    */
-  plugins: [{ src: '@/plugins/aos', mode: 'client' }, '@/plugins/vee-validate', { src: './plugins/vue-gtag', mode: 'client' }],
+  plugins: [
+    { src: '@/plugins/aos', mode: 'client' },
+    '@/plugins/vee-validate',
+    { src: './plugins/vue-gtag', mode: 'client' }
+  ],
 
   /*
    ** Auto import components: https://go.nuxtjs.dev/config-components
@@ -86,14 +90,17 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    // Docs: https://google-analytics.nuxtjs.org/setup
-    // '@nuxtjs/google-analytics',
   ],
 
   /*
    ** Nuxt.js modules
    */
-  modules: ['css.escape', ['vue-scrollto/nuxt', { duration: 700 }], '@nuxtjs/axios', ['nuxt-tailvue', { toast: true }]],
+  modules: [
+    'css.escape',
+    ['vue-scrollto/nuxt', { duration: 700 }],
+    '@nuxtjs/axios',
+    ['nuxt-tailvue', { toast: true }],
+  ],
 
   googleAnalytics: {
     id: 'UA-197560367-1', // Use as fallback if no runtime config is provided

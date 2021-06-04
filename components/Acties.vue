@@ -10,7 +10,8 @@
       <actie-left
         headline="Gereduceerd tarief"
         background="bg-white-800"
-        content="Als tijdelijk introductietarief bied ik U een uitgebreide basisbehandeling aan van uw voeten, hoeveel eelt, kalknagels, likdoorns of nagelriemen ook behandeld moeten worden, <strong>voor de prijs van € 22,95</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn. Zo kunt U het vrijblijvend ervaren*.<br><br>
+        content="Als tijdelijk introductietarief bied ik U een uitgebreide basisbehandeling aan van uw voeten, hoeveel eelt, kalknagels, likdoorns of nagelriemen ook behandeld moeten worden, <strong>voor de prijs van € 22,95 *</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
+        Zo kunt U het vrijblijvend ervaren.<br><br>
         Deze aanbieding is geldig voor eerste afspraken gemaakt voor 15 juni."
       >
         <template v-slot:image>
@@ -25,14 +26,14 @@
 </template>
 
 <script>
-import ActieRight from '@/components/FeatureRight'
-import ActieLeft from '@/components/FeatureLeft'
+  import ActieRight from '@/components/FeatureRight'
+  import ActieLeft from '@/components/FeatureLeft'
 
-export default {
-  name: 'Acties',
-  components: {
-    'actie-right': ActieRight,
-    'actie-left': ActieLeft
+  export default {
+    name: 'Acties',
+    components: {
+      'actie-right': ActieRight,
+      'actie-left': ActieLeft
+    }
   }
-}
 </script>
