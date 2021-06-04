@@ -1,7 +1,7 @@
 <template>
 <div class="shadow-md">
   <client-only>
-    <div v-if="isOpen" class="fixed bottom-0 left-0 items-center justify-center w-full p-2 bg-gray-200 lg:flex">
+    <div v-if="isOpen" class="fixed bottom-0 left-0 z-50 items-center justify-center w-full p-2 bg-gray-200 lg:flex">
       <div class="flex flex-row justify-center">
         <div class="pb-0 text-4xl leading-none">
           🍪
