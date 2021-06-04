@@ -28,6 +28,7 @@
     "@tailwindcss/line-clamp": "^0.2.0",
     "aos": "^2.3.4",
     "css.escape": "^1.5.1",
+    "dotenv": "^8.6.0",
     "nuxt": "^2.14.3",
     "nuxt-tailvue": "^1.0.90",
     "postcss-scss": "^2.1.1",
