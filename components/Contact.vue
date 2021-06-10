@@ -85,7 +85,7 @@
               <div class="relative flex items-center px-10">
                 <input id="akkoord" name="akkoord" v-model="akkoord" type="checkbox" required class="" />
                 <label for="akkoord" class="block ml-2 text-sm text-gray-600">
-                  Ik ga accoord met de
+                  Ik ga akkoord met de
                   <nuxt-link to="#" class="text-orange hover:text-blue">
                     Voorwaarden
                   </nuxt-link>
