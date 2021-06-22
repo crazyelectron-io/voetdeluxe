@@ -10,7 +10,7 @@
       <actie-left
         headline="Gereduceerd tarief"
         background="bg-white-800"
-        content="Als kennismakingstarief bied ik U een uitgebreide basisbehandeling aan van uw voeten, inclusief eelt, max. 4 kalknagels, likdoorns en/of nagelriemen behandeling, <strong>voor de prijs van € 22,95 *</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
+        content="Als kennismakingstarief bied ik U een uitgebreide basisbehandeling aan van uw voeten, inclusief eelt, likdoorns, nagelriemen behandelingmax en/of max. 4 kalknagels, <strong>voor de prijs van € 22,95 *</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
         Zo kunt U het gemak van een pedicure aan huis zelf ervaren.<br><br>
         Deze aanbieding is geldig voor eerste afspraken gemaakt voor 1 juli."
       >
