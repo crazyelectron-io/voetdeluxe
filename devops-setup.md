@@ -1,12 +1,12 @@
 # Setup Azure DevOps
 
-Create a Service Principal in the Vistual Studio Ultimate with MSDN subscription (SubscriptionId 957fbe9a-0690-4fab-8da4-0b159c7d8df5).
-This subscription is connected to the Azure AD tenant moermancc (Tenant Id d7c49f9-d897-4059-bccd-8c853f46af2c).
+Create a Service Principal in the Vistual Studio Ultimate with MSDN subscription (SubscriptionId xxxx).
+This subscription is connected to the Azure AD tenant moermancc (Tenant Id xxxx).
 
 Select this subscription as the active subscription.
 
 ```shell
-PS> az account set --subscription 957fbe9a-0690-4fab-8da4-0b159c7d8df5
+PS> az account set --subscription xxxx5
 ```
 
 ## Create Azure Service Principal
@@ -14,16 +14,16 @@ PS> az account set --subscription 957fbe9a-0690-4fab-8da4-0b159c7d8df5
 Then create the service principal account using the following command:
 
 ```shell
-PS> az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/957fbe9a-0690-4fab-8da4-0b159c7d8df5" --name "AzureDevOpsSP"
+PS> az ad sp create-for-rbac --role="Contributor" --scopes="/subscriptions/xxxx" --name "AzureDevOpsSP"
 Changing "AzureDevOpsSP" to a valid URI of "http://AzureDevOpsSP", which is the required format used for service principal names
-Creating 'Contributor' role assignment under scope '/subscriptions/957fbe9a-0690-4fab-8da4-0b159c7d8df5'
+Creating 'Contributor' role assignment under scope '/subscriptions/xxxxxx'
 The output includes credentials that you must protect. Be sure that you do not include these credentials in your code or check the credentials into your source control. For more information, see https://aka.ms/azadsp-cli
 {
-  "appId": "d9616c38-8082-4b0b-b88c-fcb65ce2f727",
+  "appId": "xxxxxxxxx",
   "displayName": "AzureDevOpsSP",
   "name": "http://AzureDevOpsSP",
-  "password": "fpeEgwAzzwHJCbP48SV2Co.-352dKTZ6oe",
-  "tenant": "fd7c49f9-d897-4059-bccd-8c853f46af2c"
+  "password": "xxxxxxxx",
+  "tenant": "xxxxxxxx"
 }
 ```
 
