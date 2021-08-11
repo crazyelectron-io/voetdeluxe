@@ -5,7 +5,8 @@
   "runArgs": ["-u", "node"],
   "settings": {
     "workbench.colorTheme": "Cobalt2",
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.defaultProfile.osx": "bash",
+    "terminal.integrated.defaultProfile.linux": "bash"
   },
   "postCreateCommand": "npm install",
   "extensions": [

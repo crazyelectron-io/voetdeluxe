@@ -42,7 +42,7 @@
       }
     },
     created() {
-      if (!this.getGDPR() === true) {
+      if (!this.getGDPR()) {
         this.isOpen = true;
       }
     },
