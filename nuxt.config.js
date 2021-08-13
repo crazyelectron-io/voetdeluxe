@@ -90,7 +90,6 @@ export default {
   buildModules: [
     // Doc: https://github.com/nuxt-community/nuxt-tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/dotenv',
   ],
 
   /*
@@ -104,8 +103,8 @@ export default {
   ],
 
   googleAnalytics: {
-    id: process.env.GOOGLE_ANALYTICS_ID,
-    dev: process.env.NODE_ENV != 'production', // Enable GA only in production site
+    id: 'UA-197560367-1', // Use as fallback if no runtime config is provided
+    dev: false, // Turn development mode on to disable GA
     checkDuplicatedScript: true,
   },
 

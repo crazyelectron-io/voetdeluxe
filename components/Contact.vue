@@ -13,9 +13,7 @@
       </div>
       <!-- Contact Form -->
       <div class="flex flex-col justify-center pt-6 mx-auto sm:flex-row">
-        <!-- eslint-disable vue/no-unused-vars -->
         <ValidationObserver v-slot="{ invalid, handleSubmit, reset }" ref="contact">
-        <!--- eslint-enable --->
           <form class="space-y-9" @submit.prevent="handleSubmit(onSubmit)">
             <div class="flex flex-row w-full mb-8">
               <select v-model="aanhef" class="z-0 w-1/4 h-10 py-1 mr-6 placeholder-gray-200 bg-white rounded-md shadow-md md:w-1/5 focus:placeholder-gray-100 focus:shadow-outline" placeholder="Mw.">
@@ -139,8 +137,8 @@
         let reportError = false
 
         await this.$axios.post('/aanmelden/', {
-          name: process.env.API_USER,
-          password: process.env.API_PASSWORD,
+          name: 'VoetDeluxe',
+          password: 'Pandora1'
         }).then(function (response) {
           token = response.data.token
           reportError = false
