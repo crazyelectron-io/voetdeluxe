@@ -100,8 +100,7 @@ export default {
     'css.escape',
     ['vue-scrollto/nuxt', { duration: 700 }],
     '@nuxtjs/axios',
-    // ['nuxt-tailvue', { toast: true }],
-    ['nuxt-tailvue', { all: true, toast: { defaults: { containerClasses: [ 'mt-12' ] } } } ],
+    ['nuxt-tailvue', { toast: true }],
   ],
 
   googleAnalytics: {

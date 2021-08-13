@@ -1,6 +1,6 @@
 <template>
   <nav
-    class="fixed z-40 flex items-center justify-between w-full px-4 h-26"
+    class="fixed z-40 flex items-center justify-between w-full h-16 px-4"
     :class="[isSticky ? 'bg-white shadow-lg' : 'bg-orange']"
     id="home"
   >
@@ -300,7 +300,6 @@
 
       </div>
     </aside>
-    </div>
   </nav>
 </template>
 
@@ -356,17 +355,6 @@ export default {
     document.addEventListener('click', this.onClick)
     document.addEventListener('scroll', this.onScroll)
 
-    this.$toast.show({
-      type: 'danger',
-      message: 'Ik ben vanaf 28 augustus op vakantie en verwen uw voeten graag weer na 19 september',
-      title: 'LET OP:',
-      classClose: 'text-orange-300 mx-auto shadow-3xl text-lg font-black',
-      classTitle: 'text-orange-300 mx-auto shadow-3xl text-lg font-black',
-      classToast: 'bg-blue z-50 mx-auto shadow-3xl',
-      classMessage: 'text-white font-semibold text-lg',
-      classTimeout: 'bg-white',
-      timeout: 30,
-    })
   },
   beforeDestroy() {
     document.removeEventListener('click', this.onClick, true)
