@@ -9,12 +9,11 @@
       </div>
       <div class="flex w-full px-2 md:px-4">
         <div class="container my-4">
-          <div class="flex items-center justify-center mx-auto leading-6">
+          <div class="flex justify-center items-center mx-auto leading-6">
             <p class="mb-3 text-gray-600 ">
               Voor optimale verzorging van uw voeten gebruik ik tijdens de behandeling professionele producten.
               <br>
               U kunt deze ook bij mij aanschaffen voor eigen gebruik.
-              <br>
               <br>
               Specifiek voor schimmelnagels, raad ik aan dagelijks HFL Solution Spray te gebruiken.
             </p>
