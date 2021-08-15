@@ -60,7 +60,7 @@
       </behandeling-column>
     </div>
     <div class="flex justify-center px-3 mb-3 text-sm text-gray-400 ">
-      * Exclusief reiskosten, Brielle: € 0,-, Oostvoorne: € 3,00, Rockanje: € 5,00
+      * Exclusief reiskosten. Brielle: € 0,-, Oostvoorne/Zwartewaal: € 3,00, Rockanje: € 5,00, Hellevoetsluis: € 7,00.
     </div>
     <div class="flex justify-center px-3 py-0 mt-0 mb-6 text-base font-semibold text-gray-600 md:px-4">
       U kunt contant betalen maar ook pinnen met bankpas of telefoon

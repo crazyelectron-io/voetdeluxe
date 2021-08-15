@@ -9,9 +9,14 @@
       </div>
       <div class="flex w-full px-2 md:px-4">
         <div class="container my-4">
-          <div class="flex items-center mx-auto leading-6">
+          <div class="flex items-center justify-center mx-auto leading-6">
             <p class="mb-3 text-gray-600 ">
-              Voor optimale verzorging van uw voeten gebruik ik tijdens de behandeling professionele producten. U kunt deze ook bij mij aanschaffen.
+              Voor optimale verzorging van uw voeten gebruik ik tijdens de behandeling professionele producten.
+              <br>
+              U kunt deze ook bij mij aanschaffen.
+              <br>
+              <br>
+              <span class="font-semibold">Specifiek voor schimmelnagels, raad ik aan dagelijks HFL Solution Spray te gebruiken.</span>
             </p>
           </div>
           <div class="flex items-center justify-between mb-4">
@@ -28,6 +33,16 @@
           </div>
 
           <div class="flex flex-no-wrap mb-8 overflow-x-scroll scrolling-touch">
+            <product-column image="product-hfl-solution-spray.png">
+              <template v-slot:overline>Voor de verzorging van kalknagels</template>
+              <template v-slot:headline>Solution Spray</template>
+              <template v-slot:description>
+                HFL Laboratories gepatenteerde <i>Solution Spray</i> is het product voor de verzorging van <strong>kalknagels</strong> die vaak verkleurd of broos zijn. De spray maakt de huid en nagels goed schoon en bevat verzorgende bestanddelen.<br><br>Ook kan de spray gebruikt worden op de huid. Bijvoorbeeld wanneer men de voeten of huid niet goed heeft afgedroogd na het douchen of zwemmen en de huid dus rood en gevoelig kan zijn geworden.
+              </template>
+              <template v-slot:price>
+                <h2 class="font-bold text-gray-700">Prijs: € 12,50</h2>
+              </template>
+            </product-column>
             <product-column image="product-hfl-dermoleen.png">
               <template v-slot:overline>Voor hydratatie van de voet</template>
               <template v-slot:headline>Dermoleen crème</template>
@@ -57,16 +72,6 @@
               </template>
               <template v-slot:price>
                 <h2 class="font-bold text-gray-700">Prijs: € 13,50</h2>
-              </template>
-            </product-column>
-            <product-column image="product-hfl-solution-spray.png">
-              <template v-slot:overline>Voor de verzorging van kalknagels</template>
-              <template v-slot:headline>Solution Spray</template>
-              <template v-slot:description>
-                HFL Laboratories gepatenteerde <i>Solution Spray</i> is het product voor de verzorging van <strong>kalknagels</strong> die vaak verkleurd of broos zijn. De spray maakt de huid en nagels goed schoon en bevat verzorgende bestanddelen.<br><br>Ook kan de spray gebruikt worden op de huid. Bijvoorbeeld wanneer men de voeten of huid niet goed heeft afgedroogd na het douchen of zwemmen en de huid dus rood en gevoelig kan zijn geworden.
-              </template>
-              <template v-slot:price>
-                <h2 class="font-bold text-gray-700">Prijs: € 12,50</h2>
               </template>
             </product-column>
           </div>
