@@ -10,14 +10,14 @@
       <actie-left
         headline="Gereduceerd tarief"
         background="bg-white-800"
-        content="Als kennismaking bied ik U een uitgebreide basisbehandeling aan van uw voeten, inclusief eelt, nagelriemen behandeling en evt. tot 5 kalk- of schimmelnagels, <strong>voor de prijs van € 22,95 *</strong>.
+        content="Ter kennismaking bied ik U een uitgebreide basisbehandeling van uw voeten aan inclusief eelt verwijderen, nagels behandelen, zonodig een likdoorn verwijderen en evt. max45 kalk- of schimmelnagels, <strong>voor de prijs van € 22,95 *</strong>.
         <br>
         <br>
         Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
         Zo kunt U het gemak van een pedicure aan huis zelf ervaren.
         <br>
         <br>
-        Deze aanbieding is geldig voor eerste afspraken gemaakt voor 1 oktober."
+        Deze aanbieding is geldig voor eerste afspraken gemaakt voor 1 november."
       >
         <template v-slot:image>
           <img src="~assets/img/actietarief.png" alt="actietarief">
