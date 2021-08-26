@@ -50,6 +50,16 @@ export default {
   name: 'Hero',
   components: {
     'hero-content': HeroContent
+  },
+  mounted() {
+    this.$toast.show({
+      type: 'success',
+      message: 'Ik ben van 30 augustus tot 17 september op vakantie. Daarna help ik u graag weer aan mooie voeten.',
+      classToast: 'bg-blue-700 z-50 mx-auto shadow-3xl text-white',
+      classMessage: 'text-white font-semibold text-lg',
+      classTimeout: 'bg-white',
+      timeout: 20,
+    })
   }
 }
 </script>
