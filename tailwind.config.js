@@ -90,17 +90,18 @@ module.exports = {
     isolation: false,
   },
   purge: {
-    content: [  // See nuxt.config.js
-      './components/**/*.{vue,js}',
-      './node_modules/tv-toast/**/*.vue',
-      './layouts/**/*.vue',
-      './pages/**/*.vue',
-      './plugins/**/*.{js,ts}',
-      './nuxt.config.{js,ts}',
-      './assets/**/*.css',
-    ],
-    options: {
-      keyframes: true,
-    },
+    enabled: false,
+    // content: [  // See nuxt.config.js
+    //   './components/**/*.{vue,js}',
+    //   './node_modules/tv-toast/**/*.vue',
+    //   './layouts/**/*.vue',
+    //   './pages/**/*.vue',
+    //   './plugins/**/*.{js,ts}',
+    //   './nuxt.config.{js,ts}',
+    //   './assets/**/*.css',
+    // ],
+    // options: {
+    //   keyframes: true,
+    // },
   },
 }
