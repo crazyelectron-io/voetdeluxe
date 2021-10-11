@@ -125,24 +125,24 @@ export default {
    */
   build: {
     // The following fixes an issue with Babel having contradicting 'loose' settings [2021-05-08].
-    // babel: {
-    //   plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
-    // },
+    babel: {
+      plugins: [['@babel/plugin-proposal-private-methods', { loose: true }]],
+    },
     transpile: ['vee-validate/dist/rules'],
     // You can extend webpack config here
     extend(config, ctx) {},
   },
 
-  // purge: {
-  //   content(defaultContents) {
-  //     return defaultContents.map((path) => join(nuxtConfig.srcDir, path)).map((file) => file.replace('.js', '.ts'))
-  //   },
-  // },
+  purge: {
+    content(defaultContents) {
+      return defaultContents.map((path) => join(nuxtConfig.srcDir, path)).map((file) => file.replace('.js', '.ts'))
+    },
+  },
 
   purgeCSS: {
-    enabled: false, // ({ isDev, isClient }) => (!isDev && isClient), // or `false` when in dev/debug mode
-    // whitelist: ['hidden', 'aos-init', 'aos-animate', 'data-aos-delay', 'data-aos-duration', 'fade-up', 'zoom-in'],
-    // whitelistPatterns: [/md:w-[1-6]/],
+    enabled: ({ isDev, isClient }) => (!isDev && isClient), // or `false` when in dev/debug mode
+    whitelist: ['hidden', 'aos-init', 'aos-animate', 'data-aos-delay', 'data-aos-duration', 'fade-up', 'zoom-in'],
+    whitelistPatterns: [/md:w-[1-6]/],
   },
 
   /*
