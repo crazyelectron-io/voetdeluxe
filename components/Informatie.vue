@@ -1,26 +1,26 @@
 <template>
-  <section class="bg-white-800 py-8" id="informatie">
-    <div class="container max-w-5xl mx-auto m-8">
-      <h1 class="w-full my-2 text-2xl md:text-3xl lg:text-4xl font-bold leading-tight text-center text-gray">
+  <section class="py-8 bg-white" id="informatie">
+    <div class="container max-w-5xl m-8 mx-auto">
+      <h1 class="w-full my-2 text-2xl font-bold leading-tight text-center md:text-3xl lg:text-4xl text-gray">
         Informatie
       </h1>
       <div class="w-full mb-4">
-        <div class="h-1 mx-auto gradient w-64 opacity-100 my-0 py-0 rounded-t bg-blue"></div>
+        <div class="w-64 h-1 py-0 mx-auto my-0 rounded-t opacity-100 gradient bg-blue"></div>
       </div>
     </div>
 
-    <div class="md:flex shadow-lg mx-6 md:mx-12 lg:mx-auto my-8 max-w-lg sm:max-w-2xl md:max-w-4xl rounded-lg">
-      <img class="w-full md:w-1/3 object-cover rounded-lg rounded-r-none " src="~assets/img/privacy.jpg" alt="privacyß">
-      <div class="w-full md:w-2/3 px-4 py-4 rounded-lg rounded-l-none bg-white">
+    <div class="max-w-lg mx-6 my-8 rounded-lg shadow-lg md:flex md:mx-12 lg:mx-auto sm:max-w-2xl md:max-w-4xl">
+      <img class="object-cover w-full rounded-lg rounded-r-none md:w-1/3 " src="~assets/img/privacy.jpg" alt="privacyß">
+      <div class="w-full px-4 py-4 rounded-lg rounded-l-none bg-white-800 md:w-2/3">
         <div class="flex items-center">
-          <h2 class="text-2xl text-orange-600 font-bold mr-auto">Privacyverklaring</h2>
+          <h2 class="mr-auto text-2xl font-bold text-orange-600">Privacyverklaring</h2>
         </div>
-        <p class="text-sm text-gray-700 mt-4">
+        <p class="mt-4 text-sm text-gray-700">
           VoetDeluxe hecht veel waarde aan de bescherming van Uw persoonsgegevens. In de privacy verklaring staat duidelijk hoe met Uw persoonsgegevens wordt omgegaan.<br>
           U kunt er zeker van zijn dat er alles aan gedaan wordt uw privacy te waarborgen. VoetDeluxe houdt zich in alle gevallen aan de toepasselijke wet- en regelgeving, waaronder de Algemene Verordening Gegevensbescherming (AVG).
         </p>
-        <div class="flex items-center justify-end mt-4 top-auto">
-          <button class="px-4 mb-2 py-2 mx-auto w-full md:w-1/2 justify-between font-semibold bg-orange text-white border-gray-300 rounded-lg shadow-lg hover:text-blue-600 focus:border-none focus:ring-none active:outline-none focus:outline-none btn"
+        <div class="top-auto flex items-center justify-end mt-4">
+          <button class="justify-between w-full px-4 py-2 mx-auto mb-2 font-semibold text-white border-gray-300 rounded-lg shadow-lg md:w-1/2 bg-orange hover:text-blue-600 focus:border-none focus:ring-none active:outline-none focus:outline-none btn"
             @click='showHide'
           >
             {{ isHidden ? 'Lees de volledige verklaring' : 'Verberg de privacyverklaring' }}
@@ -32,11 +32,11 @@
             v-for="(privacy, index) in privacy"
             :key="privacy.heading"
           >
-            <p class="bg-white text-orange text-xl font-semibold py-2 px-4 cursor-pointer"
+            <p class="px-4 py-2 text-xl font-semibold bg-white cursor-pointer text-orange"
               @click="privacyItemClick(index)">
               {{ privacy.heading }}
             </p>
-            <div :data-privacy-id="index" class="bg-white p-1 text-gray-600 px-6 hidden">
+            <div :data-privacy-id="index" class="hidden p-1 px-6 text-gray-600 bg-white">
               <span v-html="privacy.details"></span>
             </div>
           </div>
@@ -58,14 +58,14 @@ export default {
           details: 'Door het gebruik van deze website en de daarop beschikbare diensten laat U bepaalde gegevens bij mij achter. ' +
           'Dit gebeurd ook in het kader van de uitvoering van de behandelovereenkomst. Dat kunnen persoonsgegevens zijn. ' +
           'VoetDeluxe bewaart en gebruikt uitsluitend persoonsgegevens die rechtstreeks door U worden opgegeven of waarvan bij opgave duidelijk is dat ze aan VoetDeluxe worden verstrekt om te verwerken. ' +
-          'Afhankelijk van de dienst die U van VoetDeluxe afneemt kunnen één of meerdere van de volgende gegevens verzameld worden:<ul class="list-disc ml-4">' +
+          'Afhankelijk van de dienst die U van VoetDeluxe afneemt kunnen één of meerdere van de volgende gegevens verzameld worden:<ul class="ml-4 list-disc">' +
           '<li>NAW-gegevens</li><li>Geslacht</li><li>Geboortedatum</li><li>Emailadres</li><li>Telefoonnummer</li><li>Gegevens betreffende Uw voeten</li>' +
           '<li>Tijdstip van uw afspraak.</li>'
         },
         {
           heading: 'Waarvoor worden de gegevens verwerkt',
           details: 'Uw persoonsgegevens worden door medisch pedicure Dorietha van Lent verwerkt ten behoeve van de volgende doeleinden:' +
-          '<ul class="list-disc ml-4">' +
+          '<ul class="ml-4 list-disc">' +
           '<li>Het geven van de behandelingen</li> ' +
           '<li>Het inplannen van een afspraak</li>' +
           '<li>Het versturen van afspraakgegevens, herinnering via email of bericht</li>' +
@@ -96,7 +96,7 @@ export default {
         {
           heading: 'Beveiliging',
           details: 'VoetDeluxe heeft passende technische- en organisatorische maatregelen genomen om persoonsgegevens van U te beschermen tegen onrechtmatige verwerking.'  +
-          'VoetDeluxe heeft ondermeer de volgende maatregelen genomen:<ul class="list-decimal ml-4">' +
+          'VoetDeluxe heeft ondermeer de volgende maatregelen genomen:<ul class="ml-4 list-decimal">' +
           '<li>Alle personen die namens Pedicure VoetDeluxe van uw gegevens kennis kunnen nemen, zijn gehouden aan geheimhouding daarvan.</li>' +
           '<li>We hanteren een gebruikersnaam, wachtwoordbeleid plus tweede factor beveiliging op al onze systemen waar Uw gegevens worden bewaard of bewerkt.</li>' +
           '<li>We versleutelen de gegevens die opgeslagen worden en maken back-ups van de persoonsgegevens om te kunnen herstellen in geval van een storing.</li>' +

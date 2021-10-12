@@ -1,5 +1,5 @@
 <template>
-  <section class="py-2 text-white bg-white" id="behandelingen">
+  <section class="py-2 text-white bg-white-800" id="behandelingen">
     <div class="container flex flex-wrap w-full py-6 mx-auto">
       <h1 class="w-full my-2 text-3xl font-bold leading-tight text-center md:text-4xl lg:text-5xl text-gray">
         Behandelingen
