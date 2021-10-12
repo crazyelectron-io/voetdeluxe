@@ -10,12 +10,7 @@
       <actie-left
         headline="Gereduceerd tarief"
         background="bg-white-800"
-<<<<<<< HEAD
-<<<<<<< HEAD
-        content="Ter kennismaking bied ik U een uitgebreide basisbehandeling van uw voeten aan inclusief eelt verwijderen, nagels en nagelriemen behandelen, zonodig een likdoorn verwijderen en tot 5 kalk- of schimmelnagels, <strong>voor de prijs van € 22,95 *</strong>.
-=======
-        content="Als kennismaking bied ik U een uitgebreide basisbehandeling aan van uw voeten, inclusief eelt, nagelriemen behandeling en evt. tot 5 kalk- of schimmelnagels, <strong>voor de prijs van € 22,95 *</strong>.
->>>>>>> parent of 6b80aaf... Actie button toegevoegd
+        content="Ter kennismaking bied ik U een uitgebreide basisbehandeling van uw voeten aan inclusief eelt verwijderen, nagels behandelen, zonodig een likdoorn verwijderen en evt. max. 4 kalk- of schimmelnagels, <strong>voor de prijs van € 22,95 *</strong>.
         <br>
         <br>
         Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
@@ -23,11 +18,6 @@
         <br>
         <br>
         Deze aanbieding is geldig voor eerste afspraken gemaakt voor 1 oktober."
-=======
-        content="Als kennismakingstarief bied ik U een uitgebreide basisbehandeling aan van uw voeten, inclusief eelt, likdoorns, nagelriemen behandelingmax en/of max. 4 kalknagels, <strong>voor de prijs van € 22,95 *</strong>.<br>Ik neem hierbij alle tijd voor uw voeten en ga niet weg voordat ze weer als van een pasgeboren baby zijn.
-        Zo kunt U het gemak van een pedicure aan huis zelf ervaren.<br><br>
-        Deze aanbieding is geldig voor eerste afspraken gemaakt voor 1 juli."
->>>>>>> parent of 8869da9... Fix some of the text
       >
         <template v-slot:image>
           <img src="~assets/img/actietarief.png" alt="actietarief">
