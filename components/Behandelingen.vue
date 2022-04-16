@@ -21,7 +21,7 @@
           </ul>
         </template>
         <template v-slot:price>
-          <h2 class="font-bold text-gray-700">Prijs: € 30,00 *</h2>
+          <h2 class="font-bold text-gray-700">Prijs: € 32,50 *</h2>
         </template>
       </behandeling-column>
       <behandeling-column :rows="3" image="behandeling-voetmassage.jpeg">
@@ -38,7 +38,7 @@
           </ul>
         </template>
         <template v-slot:price>
-          <h2 class="font-bold text-gray-700">Prijs: € 45,00 *</h2>
+          <h2 class="font-bold text-gray-700">Prijs: € 47,50 *</h2>
         </template>
       </behandeling-column>
       <behandeling-column :rows="3" image="behandeling-deel.jpg">
@@ -55,12 +55,12 @@
           </ul>
         </template>
         <template v-slot:price>
-          <h2 class="font-bold text-gray-700">Prijs: € 20,00 *</h2>
+          <h2 class="font-bold text-gray-700">Prijs: € 22,50 *</h2>
         </template>
       </behandeling-column>
     </div>
     <div class="flex justify-center px-3 mb-3 text-sm text-gray-400 ">
-      * Exclusief reiskosten, Zwartewaal/Oostvoorne: € 3,00, Rockanje: € 5,00, Hellevoetsluis: € 7,00
+      * Exclusief reiskosten, Zwartewaal/Oostvoorne: € 3,00, Rockanje: € 5,50, Hellevoetsluis: € 7,50
     </div>
     <div class="flex justify-center px-3 py-0 mt-0 mb-6 text-base font-semibold text-gray-600 md:px-4">
       U kunt contant betalen maar ook pinnen met bankpas, smartphone of Apple Watch
