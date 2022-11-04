@@ -27,5 +27,6 @@
     "gruntfuggly.todo-tree",
     "octref.vetur",
     "znck.vue",
+    "vue.volar"
   ]
 }

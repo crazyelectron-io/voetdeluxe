@@ -10,7 +10,7 @@
       <feature-right
         headline="Even voorstellen"
         background="bg-white"
-        content="Mijn naam is Arniël Moerman. Met heel veel enthousiasme ben ik dit jaar gestart als pedicure in de regio Voorne, na mijn gehele carriere in de ouderenzorg gewerkt te hebben. De opleiding van 9 maanden tot professionele pedicure heb ik in juni afgerond. Als gediplomeerd pedicure ben ik ook aangesloten bij ProVoet.<br><br>Mensen zien mij als een enthousiast en zorgzaam persoon, die ook graag een praatje maakt.<br><br>Ik wil uw voeten goed verzorgen en gezond houden met alle aandacht en tijd die ze verdienen. Vanuit mijn woonplaats Brielle werk ik ambulant in de regio Brielle, Zwartewaal, Westvoorne en een deel van Hellevoetsluis."
+        content="Mijn naam is Arniël Moerman. Met heel veel enthousiasme ben ik vorig jaar gestart als pedicure in de regio Voorne, na mijn gehele carriere in de ouderenzorg gewerkt te hebben. Om de beste verzorging te kunnen garanderen heb ik een opleiding van 9 maanden tot professionele pedicure gevolgd. Als gediplomeerd pedicure ben ik ook aangesloten bij ProVoet.<br><br>Mensen zien mij als een enthousiast en zorgzaam persoon, die ook graag een praatje maakt.<br><br>Ik wil uw voeten goed verzorgen en gezond houden met alle aandacht en tijd die ze verdienen. Vanuit mijn woonplaats Brielle werk ik ambulant in de regio Brielle, Zwartewaal, Westvoorne en een deel van Hellevoetsluis."
       >
         <template v-slot:image>
           <img src="~assets/img/voetdeluxe-arniel.jpg" class="rounded-2xl" alt="voorstellen">

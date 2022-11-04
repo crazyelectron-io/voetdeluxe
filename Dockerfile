@@ -1,6 +1,9 @@
 # Stage 1 - build
 FROM node:15.14.0-alpine3.13 AS builder
 
+ENV NODE_ENV=production
+ENV NODE_OPTIONS="--openssl-legacy-provider"
+
 # create destination directory
 # RUN mkdir -p /app
 WORKDIR /app
@@ -31,6 +34,7 @@ COPY --from=builder /app/static ./static
 
 # set app serving to permissive / assigned
 ENV NUXT_HOST=0.0.0.0
+ENV NODE_OPTIONS="--openssl-legacy-provider"
 
 # set app port
 ENV NUXT_PORT=3000

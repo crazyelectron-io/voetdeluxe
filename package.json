@@ -1,6 +1,6 @@
 {
   "name": "voetdeluxe",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "VoetDeluxe pedicure website",
   "author": {
     "name": "Ron Moerman",
@@ -9,14 +9,14 @@
   },
   "private": true,
   "scripts": {
-    "dev": "nuxt",
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "generate": "nuxt generate",
-    "docker": "npm run dev",
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider nuxt",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider nuxt build",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider nuxt start",
+    "generate": "NODE_OPTIONS=--openssl-legacy-provider nuxt generate",
+    "docker": "NODE_OPTIONS=--openssl-legacy-provider npm run dev",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
-    "lint": "npm run lint:js && npm run lint:style",
+    "lint": "NODE_OPTIONS=--openssl-legacy-provider npm run lint:js && npm run lint:style",
     "test": "jest",
     "test:dev": "jest --watch"
   },
